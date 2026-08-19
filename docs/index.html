@@ -20,8 +20,24 @@
   /* gmsers is dark, always: black page, white text, lobster-red links */
   :root { --paper:#000; --ink:#f4f4f2; --muted:#9a9ea6; --faint:#242629; --accent:#ff4b33; }
   * { box-sizing:border-box; margin:0; }
-  body { background:var(--paper); color:var(--ink); max-width:1000px; margin:0 auto; padding:22px 18px 60px;
+  body { background:var(--paper); color:var(--ink); max-width:1240px; margin:0 auto; padding:22px 18px 60px;
          font:18px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  /* main list + right rail of days; rail stacks below on phones */
+  .wrap { display:flex; gap:44px; align-items:flex-start; margin-top:16px; }
+  .wrap main { flex:1; min-width:0; }
+  aside.days { width:270px; flex:none; position:sticky; top:18px; max-height:calc(100vh - 36px);
+               overflow:auto; scrollbar-width:none; }
+  aside.days::-webkit-scrollbar { display:none; }
+  a.day { display:block; padding:9px 0; border-bottom:1px solid var(--faint); text-decoration:none; }
+  a.day .d { display:block; color:var(--ink); font-weight:700; font-size:.85rem; }
+  a.day.now .d { color:var(--accent); }
+  a.day .tl { display:block; color:var(--muted); font-size:.8rem; line-height:1.35; margin-top:1px; }
+  a.day:hover .d { color:var(--accent); }
+  @media (max-width:900px) {
+    .wrap { display:block; }
+    aside.days { width:auto; position:static; max-height:none; margin-top:30px;
+                 border-top:2px solid var(--ink); padding-top:8px; }
+  }
   .masthead { padding-bottom:10px; border-bottom:2px solid var(--ink); }
   .mrow { display:flex; align-items:flex-end; gap:16px; flex-wrap:wrap; }
   .masthead h1 { font-size:2.4rem; font-weight:800; letter-spacing:-.02em; line-height:1; }
@@ -49,11 +65,9 @@
   .srctext { color:var(--ink); opacity:.85; }
   footer { margin-top:32px; color:var(--muted); font-size:.78rem; }
   footer a { color:var(--accent); }
-  .archive { margin-top:6px; line-height:1.9; }
-  .archive a { margin-right:10px; }
   .powered { margin-top:14px; }
   .powered a { color:var(--accent); text-decoration:none; }
-  .ad { margin:32px 0 14px; }
+  .ad { margin:26px 0; }
   .ad .banner { display:block; width:100%; height:auto; border-radius:12px; }
 </style>
 </head>
@@ -65,7 +79,9 @@
     <div class="dateline">Wednesday, August 19, 2026 · no. 3</div>
   </div>
 </header>
-<ol class="stories">
+<div class="wrap">
+<main>
+<ol class="stories" start="1">
 <li><details>
   <summary>
     <span class="hl">the treasury will start buying back way more of its own long-term debt</span>
@@ -218,6 +234,9 @@
   <span class="srctext">Once again the treasury chooses to protect future money at the expense of spot money and inflation. Worth rereading for the concepts at play</span>
 </a></div>
 </details></li>
+</ol>
+<p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><img class="banner" src="onedollaraudit.png" alt="one dollar audit — a serious security audit, one dollar" loading="lazy" width="1200" height="630"></a></p>
+<ol class="stories" start="11">
 <li><details>
   <summary>
     <span class="hl">washington now looks committed to making sure the ai buildout doesn&#39;t stall</span>
@@ -346,6 +365,9 @@
   <span class="srctext">We&#39;ve had some rather bullish news coming down the pipes in the last 24 hours, and we remain at a very pivotal low vol choose your direction type moment for Bitcoin and many other coins. The bullish medium term set up is here: First up, the</span>
 </a></div>
 </details></li>
+</ol>
+<p class="ad"><a href="https://larv.ai/" target="_blank" rel="noopener"><img class="banner" src="larv.jpg" alt="larv.ai" loading="lazy" width="1200" height="628"></a></p>
+<ol class="stories" start="21">
 <li><details>
   <summary>
     <span class="hl">circle printed $1.25 billion of usdc on solana this week</span>
@@ -478,6 +500,9 @@
   <span class="srctext">Cash App Pay is now available through MoonPay on @TrustWallet! eligible US customers can use their @CashApp balance at checkout when buying digital assets with MoonPay live today on the Trust Wallet iOS app (Android very soon)</span>
 </a></div>
 </details></li>
+</ol>
+<p class="ad"><a href="https://ethskills.com/" target="_blank" rel="noopener"><img class="banner" src="ethskills.png" alt="ethskills — ethereum knowledge for ai agents" loading="lazy" width="1200" height="628"></a></p>
+<ol class="stories" start="31">
 <li><details>
   <summary>
     <span class="hl">someone built a desktop ethereum wallet meant to sit next to your ai agent</span>
@@ -606,6 +631,9 @@
   <span class="srctext">First time in latest months I finish *both* my OpenAI and Anthropic 20x accounts limits a few days inside the week. Not good... Will end creating a new 20x account for one month I guess, as long as I have the DGX Station access.</span>
 </a></div>
 </details></li>
+</ol>
+<p class="ad"><a href="https://slop.computer/" target="_blank" rel="noopener"><img class="banner" src="slopcomputer.jpg" alt="slop.computer — onchain podcast" loading="lazy" width="1200" height="800"></a></p>
+<ol class="stories" start="41">
 <li><details>
   <summary>
     <span class="hl">someone got a depth-sensing ai model running in 8 milliseconds on a laptop</span>
@@ -726,6 +754,9 @@
   <span class="srctext">The Department of Commerce’s Census Bureau just released its analysis showing more than 24,000 noncitizens illegally vot…</span>
 </a></div>
 </details></li>
+</ol>
+<p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><img class="banner" src="onedollaraudit.png" alt="one dollar audit — a serious security audit, one dollar" loading="lazy" width="1200" height="630"></a></p>
+<ol class="stories" start="51">
 <li><details>
   <summary>
     <span class="hl">us refugee admissions are on track for the lowest number ever recorded</span>
@@ -756,9 +787,23 @@
 </details></li>
 </ol>
 <footer>
-  <p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><img class="banner" src="onedollaraudit.png" alt="one dollar audit — a serious security audit, one dollar" loading="lazy" width="1200" height="630"></a></p>
-  <div class="archive">past editions: <a href="2026-08-19.html">08-19</a> <a href="2026-08-18.html">08-18</a> <a href="2026-08-17.html">08-17</a></div>
   <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a></p>
 </footer>
+</main>
+<aside class="days">
+<a class="day now" href="2026-08-19">
+  <span class="d">wed, aug 19</span>
+  <span class="tl">treasury pins yields down, sec writes crypto rules</span>
+</a>
+<a class="day" href="2026-08-18">
+  <span class="d">tue, aug 18</span>
+  <span class="tl">a $567b bond manager puts credit onchain</span>
+</a>
+<a class="day" href="2026-08-17">
+  <span class="d">mon, aug 17</span>
+  <span class="tl">circle staffs up as x402 crosses 1m payments a day</span>
+</a>
+</aside>
+</div>
 </body>
 </html>

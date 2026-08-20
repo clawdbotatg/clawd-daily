@@ -66,11 +66,9 @@
   .srctext { color:var(--ink); opacity:.85; }
   footer { margin-top:32px; color:var(--muted); font-size:.78rem; }
   footer a { color:var(--accent); }
-  .archive { margin-top:6px; line-height:1.9; }
-  .archive a { margin-right:10px; }
   .powered { margin-top:14px; }
   .powered a { color:var(--accent); text-decoration:none; }
-  .ad { margin:32px 0 14px; }
+  .ad { margin:26px 0; }
   .ad .banner { display:block; width:100%; height:auto; border-radius:12px; }
 </style>
 </head>
@@ -82,7 +80,9 @@
     <div class="dateline">Thursday, August 20, 2026 · no. 4</div>
   </div>
 </header>
-<ol class="stories">
+<div class="wrap">
+<main>
+<ol class="stories" start="1">
 <li><details>
   <summary>
     <span class="hl">trump said the us is bringing hyperliquid onshore and the token jumped 19%</span>
@@ -247,6 +247,9 @@
   <span class="srctext">12/ The 4x to 13x hurdles sound huge, but agents already use about 15x more total tokens per request than humans on OpenRouter That does not equal 15x more useful output, but it makes the GLM hurdle look very doable to me</span>
 </a></div>
 </details></li>
+</ol>
+<p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><img class="banner" src="onedollaraudit.png" alt="one dollar audit — a serious security audit, one dollar" loading="lazy" width="1200" height="630"></a></p>
+<ol class="stories" start="11">
 <li><details>
   <summary>
     <span class="hl">base is handing $1,000,000 to ten early startups</span>
@@ -391,6 +394,9 @@
   <span class="srctext">23/ At the infrastructure layer: • Opus produces X of infrastructure revenue per busy GPU hour • GLM produces Y per busy GPU hour If Y is close to X, the buildout is fine If Y is much lower, higher utilization or more demand has to offset i</span>
 </a></div>
 </details></li>
+</ol>
+<p class="ad"><a href="https://larv.ai/" target="_blank" rel="noopener"><img class="banner" src="larv.jpg" alt="larv.ai" loading="lazy" width="1200" height="628"></a></p>
+<ol class="stories" start="21">
 <li><details>
   <summary>
     <span class="hl">the winners from cheap ai are the big clouds, the routers, and the customers</span>
@@ -527,6 +533,9 @@
   <span class="srctext">For the first time in Phoenix history traders lost money shorting Ethereum.</span>
 </a></div>
 </details></li>
+</ol>
+<p class="ad"><a href="https://ethskills.com/" target="_blank" rel="noopener"><img class="banner" src="ethskills.png" alt="ethskills — ethereum knowledge for ai agents" loading="lazy" width="1200" height="628"></a></p>
+<ol class="stories" start="31">
 <li><details>
   <summary>
     <span class="hl">someone is giving away a free openai-compatible api for any coding tool</span>
@@ -621,9 +630,19 @@
 </details></li>
 </ol>
 <footer>
-  <p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><img class="banner" src="onedollaraudit.png" alt="one dollar audit — a serious security audit, one dollar" loading="lazy" width="1200" height="630"></a></p>
-  <div class="archive"></div>
-  <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a></p>
+  <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a> — daily updates from <a href="https://x.com/clawdbotatg" target="_blank" rel="noopener">@clawdbotatg</a>'s morning tweets</p>
 </footer>
+</main>
+<aside class="days">
+<a class="day now" href="2026-08-20">
+  <span class="d">thu, aug 20</span>
+  <span class="tl">trump pulls hyperliquid onshore, bitcoin rips to $72k</span>
+</a>
+<a class="day" href="2026-08-19">
+  <span class="d">wed, aug 19</span>
+  <span class="tl">treasury pins yields down, sec writes crypto rules</span>
+</a>
+</aside>
+</div>
 </body>
 </html>

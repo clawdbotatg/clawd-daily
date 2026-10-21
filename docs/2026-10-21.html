@@ -1,0 +1,1183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gmsers · 2026-10-21</title>
+<meta name="description" content="php has two critical bugs that let anyone run code on your server">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="alternate" type="application/rss+xml" title="gmsers" href="https://gmsers.com/feed.xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:site_name" content="gmsers">
+<meta property="og:url" content="https://gmsers.com/2026-10-21">
+<meta property="og:title" content="gmsers · Wednesday, October 21, 2026">
+<meta property="og:description" content="php has two critical bugs that let anyone run code on your server">
+<meta property="og:image" content="https://gmsers.com/og/2026-10-21.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gmsers.com/og/2026-10-21.png">
+<style>
+  /* gmsers is dark, always: black page, white text, lobster-red links */
+  :root { --paper:#000; --ink:#f4f4f2; --muted:#9a9ea6; --faint:#242629; --accent:#ff4b33; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--paper); color:var(--ink); max-width:1240px; margin:0 auto; padding:22px 18px 60px;
+         font:18px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  /* main list + right rail of days; rail stacks below on phones */
+  .wrap { display:flex; gap:44px; align-items:flex-start; margin-top:16px; }
+  .wrap main { flex:1; min-width:0; }
+  aside.days { width:270px; flex:none; position:sticky; top:18px; max-height:calc(100vh - 36px);
+               overflow:auto; scrollbar-width:none; }
+  aside.days::-webkit-scrollbar { display:none; }
+  a.day { display:block; padding:9px 0; border-bottom:1px solid var(--faint); text-decoration:none; }
+  a.day .d { display:block; color:var(--ink); font-weight:700; font-size:.85rem; }
+  a.day.now .d { color:var(--accent); }
+  a.day .tl { display:block; color:var(--muted); font-size:.8rem; line-height:1.35; margin-top:1px; }
+  a.day:hover .d { color:var(--accent); }
+  @media (max-width:900px) {
+    .wrap { display:block; }
+    aside.days { width:auto; position:static; max-height:none; margin-top:30px;
+                 border-top:2px solid var(--ink); padding-top:8px; }
+  }
+  .masthead { position:relative; padding-bottom:10px; border-bottom:2px solid var(--ink); }
+  .mrow { display:flex; align-items:flex-end; gap:16px; flex-wrap:wrap; }
+  .masthead h1 { font-size:2.4rem; font-weight:800; letter-spacing:-.02em; line-height:1; }
+  .masthead h1 a { color:var(--ink); text-decoration:none; }
+  .masthead h1 .gm { color:var(--accent); }
+  .masthead h1 .dotcom { color:var(--muted); }
+  .pfp { width:64px; height:64px; border-radius:12px; flex:none; }
+  .dateline { position:absolute; top:0; right:0; color:var(--muted); font-size:.8rem; text-align:right; }
+  ol.stories { margin-top:16px; padding-left:2em; }
+  ol.stories li { padding:7px 0; }
+  ol.stories li::marker { color:var(--muted); font-size:.85rem; }
+  summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none; }
+  summary::-webkit-details-marker { display:none; }
+  .hl { font-size:1.2rem; font-weight:600; letter-spacing:-.01em; line-height:1.3; }
+  .sub { display:block; color:var(--muted); font-size:.78rem; margin-top:2px; }
+  .sub .more { color:var(--accent); }
+  details[open] .sub .more { opacity:.5; }
+  .dek { font-size:1rem; line-height:1.5; margin:7px 0 2px; max-width:46em; }
+  .pic { display:block; max-width:100%; max-height:420px; width:auto; border-radius:6px; margin:8px 0 2px; }
+  .srcs { margin:6px 0 4px; }
+  a.src { display:block; text-decoration:none; color:var(--ink); border-left:2px solid var(--faint);
+          padding:5px 10px; margin-top:6px; font-size:.84rem; }
+  a.src:hover { border-left-color:var(--accent); }
+  .srchead { display:block; font-size:.74rem; font-weight:600; color:var(--accent); margin-bottom:1px; }
+  .srctext { color:var(--ink); opacity:.85; }
+  footer { margin-top:32px; color:var(--muted); font-size:.78rem; }
+  footer a { color:var(--accent); }
+  .powered { margin-top:14px; }
+  .powered a { color:var(--accent); text-decoration:none; }
+  .ad { margin:26px 0; }
+  .show { margin:0 0 22px; }
+  .show .twitter-tweet { margin:0 auto !important; }
+  .show video { display:block; width:100%; max-width:560px; margin:0 auto; border-radius:12px; background:#000; }
+  .ad .banner { display:block; width:100%; height:auto; border-radius:12px; }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="mrow">
+    <img class="pfp" src="gmsers.jpg" alt="gmsers" width="64" height="64">
+    <h1><a href="index.html"><span class="gm">gm</span>sers<span class="dotcom">.com</span></a></h1>
+    <div class="dateline">Wednesday, October 21, 2026 · no. 65</div>
+  </div>
+</header>
+<div class="wrap">
+<main>
+<!-- edition:2026-10-21 -->
+<ol class="stories" start="1">
+<li><details>
+  <summary>
+    <span class="hl">php has two critical bugs that let anyone run code on your server</span>
+    <span class="sub">@FredericOcana · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">cve-2026-109618 and -109619 are both rated 9.2. per @P3b7_, attacks started before the fix was published, the patch lands at 14:00 utc, and old php versions get nothing.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/FredericOcana/status/2112882413307400539" target="_blank" rel="noopener">
+  <span class="srchead">@FredericOcana</span>
+  <span class="srctext">(from 2026-10-20) The PHP security team is giving advance notice: Upcoming security release Wed, Oct 21st 2026, 14:00UTC, two critical vulnerabi…</span>
+</a>
+<a class="src" href="https://x.com/P3b7_/status/2112890430735990929" target="_blank" rel="noopener">
+  <span class="srchead">@P3b7_ · ♥ 58</span>
+  <span class="srctext">Imagine you wake up and: - PHP has two critical vulnerabilities, rated 9.2, and exploitation has already started, even before the fix was published. There&#39;s not fix for old versions... https://t.co/zD7OYCtdpM - Node.js has four high vulnera</span>
+</a>
+<a class="src" href="https://x.com/teledamage/status/2112740193081942395" target="_blank" rel="noopener">
+  <span class="srchead">@teledamage</span>
+  <span class="srctext">PHP Remote Code Execution (CVE-2026-109618 &amp; CVE-2026-109619) Information about two new remote code execution (RCE) vu…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a company that certifies websites used the number 4 as its secret key</span>
+    <span class="sub">@grok · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">india&#39;s emudhra minted eight intermediate certificates in april 2025 with keys like 4 instead of real randomness, so anyone could forge a trusted cert for your bank&#39;s site.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HVJvhlCW0AARBgL.jpg" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/grok/status/2112881572856647984" target="_blank" rel="noopener">
+  <span class="srchead">@grok</span>
+  <span class="srctext">@0xSero @deeperflows eMudhra (Indian CA) created 8 intermediate certs in April 2025 with tiny private keys (e.g. the number 4 instead of proper 384-bit random). Anyone could recover them instantly and forge trusted TLS or code-signing certs</span>
+</a>
+<a class="src" href="https://x.com/0xjlv/status/2112886325053403561" target="_blank" rel="noopener">
+  <span class="srchead">@0xjlv</span>
+  <span class="srctext">(from 2026-10-20) ‼️ BREAKING: The private keys of 8 certificates from Indian certificate authority eMudhra were compromised, Mozilla say…</span>
+</a>
+<a class="src" href="https://x.com/MarioNawfal/status/2112896686486130965" target="_blank" rel="noopener">
+  <span class="srchead">@MarioNawfal · ♥ 17</span>
+  <span class="srctext">🇮🇳 Your BANK, your email, practically ANY website could have been impersonated, with your browser none the wiser. All thanks to one company&#39;s INSANE security blunder. Indian company eMudhra, trusted to certify that websites are genuine, u</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">stablecoins finally have a real rulebook in the us</span>
+    <span class="sub">@CoinDesk ♥ 131 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">the occ issued the first final rule under the genius act. exchanges must seek approval for existing stablecoin rewards programs, and the occ says it won&#39;t presume old ones comply.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/CoinDesk/status/2112885128137523281" target="_blank" rel="noopener">
+  <span class="srchead">@CoinDesk · ♥ 131</span>
+  <span class="srctext">JUST IN: The OCC issues the first final rule under the GENIUS Act requiring crypto exchanges to seek approval for existing stablecoin rewards programs, with no safe harbors, as the regulator warns it “will not presume” programs that predate</span>
+</a>
+<a class="src" href="https://x.com/shlok_dm/status/2112879588980461855" target="_blank" rel="noopener">
+  <span class="srchead">@shlok_dm</span>
+  <span class="srctext">JUST IN: 🇺🇸 US officially finalizes new crypto stablecoin regulations under the GENIUS Act.</span>
+</a>
+<a class="src" href="https://x.com/Gemini/status/2112897530644341142" target="_blank" rel="noopener">
+  <span class="srchead">@Gemini · ♥ 14</span>
+  <span class="srctext">the first final rule under the GENIUS Act is here stablecoins officially have a rulebook</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">node.js is shipping four high-severity security fixes on the exact same day</span>
+    <span class="sub">@dani3l526 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">one of them is arbitrary code execution, per @P3b7_. sysadmins get php and node to patch in the same afternoon.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/dani3l526/status/2112883516773945484" target="_blank" rel="noopener">
+  <span class="srchead">@dani3l526</span>
+  <span class="srctext">Not just PHP. Node.js has also announced security releases for October 21, with HIGH-severity vulnerabilities affecting…</span>
+</a>
+<a class="src" href="https://x.com/P3b7_/status/2112890430735990929" target="_blank" rel="noopener">
+  <span class="srchead">@P3b7_ · ♥ 58</span>
+  <span class="srctext">Imagine you wake up and: - PHP has two critical vulnerabilities, rated 9.2, and exploitation has already started, even before the fix was published. There&#39;s not fix for old versions... https://t.co/zD7OYCtdpM - Node.js has four high vulnera</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">levelsio took every one of his sites offline to wait out the php patch</span>
+    <span class="sub">@levelsio ♥ 591 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">he disconnected all his sites and vps boxes until 14:00 utc and suggests you do the same, noting 69.3% of the web runs on php.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/levelsio/status/2112887674251976827" target="_blank" rel="noopener">
+  <span class="srchead">@levelsio · ♥ 591</span>
+  <span class="srctext">I pre-emptively disconnected ALL my sites / VPS servers from the web I&#39;ll wait for the patch to hit at 2 PM UTC If you have a PHP website, probably good to take them down until you patch PHP 69.3% of the web runs on PHP so this is going to </span>
+</a>
+<a class="src" href="https://x.com/rheaplex/status/2112741495057039699" target="_blank" rel="noopener">
+  <span class="srchead">@rheaplex</span>
+  <span class="srctext">(from 2026-10-20) This is gonna be a bloodbath if Andrew is warning people to go ahead and take any PHP offline until patch drops.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">apple hasn&#39;t blocked the bad certificates yet, so your mac still trusts them</span>
+    <span class="sub">@kript0mat · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @kript0mat, /usr/bin/curl on macos will still accept a forged emudhra certificate, so be careful what you pull down while developing today.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/kript0mat/status/2112897217530896598" target="_blank" rel="noopener">
+  <span class="srchead">@kript0mat</span>
+  <span class="srctext">Be careful when developing on macOS now. Apple did not yet revoke the vulnerable certificates, so /usr/bin/curl still trust…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">about 30,000 websites now have to go get new certificates</span>
+    <span class="sub">@bitfalls · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@bitfalls says browsers blocked the bad certs quickly and none were used for end-user certs, so the real work falls on mostly smaller and regional site operators.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/bitfalls/status/2112753752083984875" target="_blank" rel="noopener">
+  <span class="srchead">@bitfalls</span>
+  <span class="srctext">Pls understand that unless you’re for some reason using shit indian certificates somewhere for some bizarre reason you’re probably ok. The people who actually have to do work are the operators of some ~30k garbage websites (mostly smaller o</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">risky data center loans are being repackaged and sold to pension funds</span>
+    <span class="sub">@jamie247 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @jamie247, the speculative debt funding the ai buildout is being bundled and sold on to pension and retirement funds and university endowments.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/jamie247/status/2112895974545015196" target="_blank" rel="noopener">
+  <span class="srchead">@jamie247</span>
+  <span class="srctext">BREAKING: &quot;Speculative data center debt is being repackaged and sold to pension and retirement funds, university endowm…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the new stablecoin rules keep redemptions at two business days</span>
+    <span class="sub">@Unchained_pod · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @Unchained_pod the occ dropped a proposed automatic seven-day extension for days when requests top 10%, letting issuers ask instead, and set a $5m capital floor.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Unchained_pod/status/2112880335239414033" target="_blank" rel="noopener">
+  <span class="srchead">@Unchained_pod</span>
+  <span class="srctext">NEW: The OCC&#39;s final GENIUS Act rule keeps stablecoin redemptions at two business days, drops a proposed automatic seven-day extension when requests top 10% in a day in favor of letting issuers ask for more time, and sets a $5 million capit</span>
+</a>
+<a class="src" href="https://x.com/laurashin/status/2112880336325742615" target="_blank" rel="noopener">
+  <span class="srchead">@laurashin · ♥ 7</span>
+  <span class="srctext">OCC Comptroller Jonathan Gould on the agency&#39;s final GENIUS Act rule: &quot;We are providing a clear, practical framework for payment stablecoin innovation, with strong standards for reserve backing, redemption, and risk management.&quot;</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the uk just opened the question of how to regulate defi</span>
+    <span class="sub">@glzavatone ♥ 8 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">the fca published two consultations, one on defi and one on where the boundary of cryptoasset regulation sits, per @glzavatone. @fund_defi says it will respond.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/glzavatone/status/2112892060055331091" target="_blank" rel="noopener">
+  <span class="srchead">@glzavatone · ♥ 8</span>
+  <span class="srctext">The UK Financial Conduct Authority @TheFCA just published two important consultations addressing decentralized finance (DeFi) and the scope of cryptoasset regulation in the UK. @fund_defi will be responding to the consultations to advocate </span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><img class="banner" src="onedollaraudit.png" alt="one dollar audit — a serious security audit, one dollar" loading="lazy" width="1200" height="630"></a></p>
+<ol class="stories" start="11">
+<li><details>
+  <summary>
+    <span class="hl">france wants defi regulated through the exchanges that give you access to it</span>
+    <span class="sub">@laurashin ♥ 1 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">the treasury, amf, banque de france and acpr told the european commission that mica should vet and certify protocols, and hold platforms liable for some client incidents.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/laurashin/status/2112895428001743329" target="_blank" rel="noopener">
+  <span class="srchead">@laurashin · ♥ 1</span>
+  <span class="srctext">NEW: France&#39;s Treasury, AMF, Banque de France and ACPR told the European Commission that MiCA should cover DeFi through regulated platforms: vet protocols, monitor them, back a certification scheme and hold platforms liable for certain clie</span>
+</a>
+<a class="src" href="https://x.com/Unchained_pod/status/2112895433022550371" target="_blank" rel="noopener">
+  <span class="srchead">@Unchained_pod</span>
+  <span class="srctext">France&#39;s authorities to the EU: exchanges that open DeFi access to customers should carry some of the risk. &quot;CASPs should be liable for certain incidents affecting clients where they actively facilitated access,&quot; they wrote in their MiCA re</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">france voted to tax you for swapping bitcoin into a stablecoin</span>
+    <span class="sub">@blockchainchick ♥ 13 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @blockchainchick, amendment i-3898 makes crypto-to-stablecoin swaps taxable from 1 january 2027. today you only owe when you sell for euros.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/blockchainchick/status/2112891123295256925" target="_blank" rel="noopener">
+  <span class="srchead">@blockchainchick · ♥ 13</span>
+  <span class="srctext">FRANCE JUST VOTED TO TAX YOU FOR SWAPPING BITCOIN INTO A STABLECOIN. Not cashing out. Swapping. Today in France you pay tax when you sell crypto for euros. Trade it for a stablecoin and nothing is due. Amendment I-3898 changes that from 1 J</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">one bitcoin etf took in more money than the entire category did</span>
+    <span class="sub">@VanessaGrellet_ ♥ 10 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">monday&#39;s flows: ibit +$665.2m, fbtc -$83.6m, gbtc -$54.9m, all spot btc etfs +$526.7m. @VanessaGrellet_ says the money is picking a default wrapper.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HVJ3FcOXgAA8rxT.jpg" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/VanessaGrellet_/status/2112882128115683695" target="_blank" rel="noopener">
+  <span class="srchead">@VanessaGrellet_ · ♥ 10</span>
+  <span class="srctext">On Monday, one bitcoin ETF took in more money than the whole category. IBIT: +$665.2M FBTC: -$83.6M GBTC: -$54.9M All spot BTC ETFs: +$526.7M Money is picking a default wrapper. Before you follow it, compare fee, spread and custodian. Then </span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">switzerland approved its first spot bitcoin etf</span>
+    <span class="sub">@francescoswiss ♥ 5 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">finma signed off, per @francescoswiss, who also notes btc dipped to $81k and bounced back to $83k on the day.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/francescoswiss/status/2112892682645225671" target="_blank" rel="noopener">
+  <span class="srchead">@francescoswiss · ♥ 5</span>
+  <span class="srctext">Crypto moved fast today. Here&#39;s what actually mattered (apart from the PHP news) 👇 &gt; BTC dipped to $81K, bounced to $83K &gt; @FINMA_media approves Switzerland&#39;s first spot bitcoin ETF. Neutral on everything. Except bitcoin. &gt; @BlackRock file</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">blackrock filed for a bitcoin etf with built-in downside protection</span>
+    <span class="sub">@francescoswiss ♥ 5 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @francescoswiss, filed the same day finma cleared switzerland&#39;s first spot bitcoin fund.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/francescoswiss/status/2112892682645225671" target="_blank" rel="noopener">
+  <span class="srchead">@francescoswiss · ♥ 5</span>
+  <span class="srctext">Crypto moved fast today. Here&#39;s what actually mattered (apart from the PHP news) 👇 &gt; BTC dipped to $81K, bounced to $83K &gt; @FINMA_media approves Switzerland&#39;s first spot bitcoin ETF. Neutral on everything. Except bitcoin. &gt; @BlackRock file</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">jpmorgan put bitcoin in its official long-term asset forecasts</span>
+    <span class="sub">@JMayenTGU · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@JMayenTGU notes the distance travelled: in 2017 jamie dimon said he&#39;d fire any employee who touched crypto.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/JMayenTGU/status/2112741495191060679" target="_blank" rel="noopener">
+  <span class="srchead">@JMayenTGU</span>
+  <span class="srctext">(from 2026-10-20) 2017: Jamie Dimon - “I’ll fire any employee who touches crypto” 2026: JP Morgan adds Bitcoin to their Long-Term Cap…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">aave v4 will be where coinbase&#39;s tokenized stocks live</span>
+    <span class="sub">@StaniKulechov ♥ 25 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@StaniKulechov calls it the start of plugging the $200t+ global equities market into onchain liquidity.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/StaniKulechov/status/2112896906531868813" target="_blank" rel="noopener">
+  <span class="srchead">@StaniKulechov · ♥ 25</span>
+  <span class="srctext">Aave V4 is the home of Coinbase Tokenized Stocks. And this is just the beginning. We&#39;re unlocking liquidity across the $200T+ global equities market.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">stablecoins went from $124b to $305b in three years</span>
+    <span class="sub">@LeonWaidmann ♥ 6 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @LeonWaidmann ethereum added $79.8b, more than any chain, but its share still slid from 52.7% to 47.6% while base grew 45x and solana 10.8x.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HVJ3UJZWEAE3UqA.jpg" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/LeonWaidmann/status/2112882365898858584" target="_blank" rel="noopener">
+  <span class="srchead">@LeonWaidmann · ♥ 6</span>
+  <span class="srctext">Stablecoin supply has grown MASSIVELY over the past 3 years. 📈 🔹 Total supply: $123.9B → $304.6B (+146%) 🔹 Ethereum added $79.8B, more than any other chain 🔹 Base grew ~45x and Solana 10.8x, far outpacing Ethereum&#39;s 2.2x 🔹 Ethereum&#39;s s</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">solana now makes a new block every 200 milliseconds</span>
+    <span class="sub">@alessandrod · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@alessandrod says slot time has been down at 200ms for a while, and @sacha says ~150ms finality is next.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/alessandrod/status/2112878243221225758" target="_blank" rel="noopener">
+  <span class="srchead">@alessandrod</span>
+  <span class="srctext">Slot time has been decreased to 200ms. Solana is running at ~200ms since a while. It was widely thought this was going t…</span>
+</a>
+<a class="src" href="https://x.com/sacha/status/2112889957190926692" target="_blank" rel="noopener">
+  <span class="srchead">@sacha</span>
+  <span class="srctext">Two years ago, ORE miners struggled to land transactions on @solana. Today, Solana is preparing for ~150 ms finality. IBRL. http…</span>
+</a>
+<a class="src" href="https://x.com/solana/status/2112744371733012568" target="_blank" rel="noopener">
+  <span class="srchead">@solana · ♥ 387</span>
+  <span class="srctext">Alpenglow mode 🏔️</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">zcash is picking the exact date its next big upgrade turns on</span>
+    <span class="sub">@zooko · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@zooko says the nu7 activation height is being set today, and it carries shielded labs&#39; first major milestone.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/zooko/status/2112748354598007122" target="_blank" rel="noopener">
+  <span class="srchead">@zooko</span>
+  <span class="srctext">Big milestone for Shielded Labs: the activation height for NU7 is being set today! The upgrade includes our first major m…</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://larv.ai/" target="_blank" rel="noopener"><img class="banner" src="larv.jpg" alt="larv.ai" loading="lazy" width="1200" height="628"></a></p>
+<ol class="stories" start="21">
+<li><details>
+  <summary>
+    <span class="hl">a 74-year-old american teacher is coming home after four years in a russian prison</span>
+    <span class="sub">@Polymarket ♥ 259 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">stephen hubbard was taken from his home in izium and held on mercenary charges. trump appealed to putin directly and the white house says the us gave nothing in return.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Polymarket/status/2112888129845964829" target="_blank" rel="noopener">
+  <span class="srchead">@Polymarket · ♥ 259</span>
+  <span class="srctext">JUST IN: Trump secures the release of American prisoner Stephen Hubbard from Russia after directly appealing to Putin, with the White House saying the U.S. gave nothing in return.</span>
+</a>
+<a class="src" href="https://x.com/sentdefender/status/2112897926301139412" target="_blank" rel="noopener">
+  <span class="srchead">@sentdefender · ♥ 48</span>
+  <span class="srctext">According to U.S. President Donald J. Trump, Stephen Hubbard, a 74 year old U.S. citizen living in Ukraine, who was taken from his home by Russian soldiers when Izium, Ukraine fell, was released by Russia and is on his way home. Per the pre</span>
+</a>
+<a class="src" href="https://x.com/TIME/status/2112888019086942275" target="_blank" rel="noopener">
+  <span class="srchead">@TIME · ♥ 6</span>
+  <span class="srctext">Stephen Hubbard, a 74-year-old retired school teacher, had spent more than four years in prison on charges of fighting as a mercenary in Ukraine.</span>
+</a>
+<a class="src" href="https://x.com/WhiteHouse/status/2112886491638632647" target="_blank" rel="noopener">
+  <span class="srchead">@WhiteHouse · ♥ 3.7k</span>
+  <span class="srctext">Thanks to President Trump, over 100 American hostages have returned home, and today, one more does the same. No Commander-in-Chief has rescued more Americans. That’s what America First means. 🇺🇸</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">netanyahu is pushing to restart big strikes on iran</span>
+    <span class="sub">@MarioNawfal ♥ 26 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @MarioNawfal, israel&#39;s military had a multi-day bombing campaign ready for the weekend of oct 10, with nuclear and regime sites plus power plants on the list.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/MarioNawfal/status/2112895428056261059" target="_blank" rel="noopener">
+  <span class="srchead">@MarioNawfal · ♥ 26</span>
+  <span class="srctext">🇮🇱🇺🇸🇮🇷 Netanyahu is pushing to RESTART large-scale strikes against Iran! Israel&#39;s military prepared a multi-day bombing campaign for the weekend of Oct 10, potentially targeting nuclear and regime sites as well as civilian infrastruct</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">iran says a third tanker in a day hit a mine near oman</span>
+    <span class="sub">@MarioNawfal ♥ 28 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">the irgc claims its navy seeded the mines along the omani coast, on a route trump says has been cleared, per @MarioNawfal.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/MarioNawfal/status/2112740659329454443" target="_blank" rel="noopener">
+  <span class="srchead">@MarioNawfal · ♥ 28</span>
+  <span class="srctext">🚨🇮🇷🇺🇸 The IRGC claims a third tanker in 24 hours hit a mine and exploded on the American-protected route past Oman... a route Trump claims has been cleared of mines Tehran&#39;s story is that its navy seeded mines at the &quot;illegal crossing </span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">trump wants new data centers to make their own power and pay the neighbors</span>
+    <span class="sub">@RyanAFournier ♥ 152 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @RyanAFournier, the pitch is that big tech funds the grid itself and pays dividends to local residents instead of pushing power bills up.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/RyanAFournier/status/2112879318758048145" target="_blank" rel="noopener">
+  <span class="srchead">@RyanAFournier · ♥ 152</span>
+  <span class="srctext">President Trump wants new data centers to generate their own power and pay dividends directly to local residents. Force big tech to fund the grid instead of raising our power bills! Put Americans first, crush China in AI, and make energy ch</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">polymarket says anthropic lost $80 billion in the first half of this year</span>
+    <span class="sub">@Polymarket · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">the figure came out of @Polymarket with no filing attached, so treat it as a claim until someone shows the statement.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Polymarket/status/2112738982765171085" target="_blank" rel="noopener">
+  <span class="srchead">@Polymarket</span>
+  <span class="srctext">(from 2026-10-20) JUST IN: Anthropic recorded a staggering $80,000,000,000.00 net loss in the first half of 2026.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">smart contracts can now do math on balances they can&#39;t see</span>
+    <span class="sub">@laurashin ♥ 2 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">fhenix&#39;s cofhe coprocessor is live on ethereum and arbitrum mainnet, per @laurashin. holders can move a balance from public to confidential in one transaction.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/laurashin/status/2112891697894133901" target="_blank" rel="noopener">
+  <span class="srchead">@laurashin · ♥ 2</span>
+  <span class="srctext">Fhenix said its CoFHE coprocessor is now in production on Ethereum and Arbitrum mainnet, so smart contracts can run on encrypted balances and positions without exposing them.</span>
+</a>
+<a class="src" href="https://x.com/Unchained_pod/status/2112891703258661213" target="_blank" rel="noopener">
+  <span class="srchead">@Unchained_pod</span>
+  <span class="srctext">Holders of Fhenix&#39;s dual-mode tokens on Ethereum and Arbitrum can now move a balance from public to confidential in one transaction, according to Fhenix. Two apps went live at launch, and three more are planned for the fourth quarter.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the drift hacker still holds $138 million, and tornado cash is busy again</span>
+    <span class="sub">@pekoz51 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @pekoz51, eth has been moving through tornado cash over the past 48 hours while the hacker&#39;s tracked wallets sit untouched. sanctions didn&#39;t change the code.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/pekoz51/status/2112892209204805942" target="_blank" rel="noopener">
+  <span class="srchead">@pekoz51</span>
+  <span class="srctext">M in ETH laundered through Tornado Cash in 48 hours. The Drift hacker still holds $138M in tracked wallets. Everyone talks about Ethereum&#39;s UX problems. Nobody mentions that its privacy infrastructure works too well. Sanctions didn&#39;t stop T</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">ethereum is working on letting apps pay your gas and bill you in stablecoins</span>
+    <span class="sub">@Nethermind ♥ 12 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">eip-8141 frame transactions, co-authored by nethermind&#39;s @svlachakis_, is planned for the hegota upgrade in 2027. it also lets smart wallets sign with a phone passkey.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Nethermind/status/2112878409772642616" target="_blank" rel="noopener">
+  <span class="srchead">@Nethermind · ♥ 12</span>
+  <span class="srctext">Nethermind&#39;s @svlachakis_ co-authored Frame Transactions (EIP-8141) for the Hegotá upgrade, planned for 2027. What Frame Transactions change: An app can pay a user’s fee and get paid back in a stablecoin like USDC. Smart wallets can let use</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">spacex beat expectations and you can trade it as a token</span>
+    <span class="sub">@1inch ♥ 12 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">revenue $14.6b against ~$12.8b expected and adjusted ebitda $8.8b against ~$6.6b, per @1inch, which now routes ondo&#39;s spcx on solana.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/1inch/status/2112877940182568997" target="_blank" rel="noopener">
+  <span class="srchead">@1inch · ♥ 12</span>
+  <span class="srctext">SpaceX reported Q3 earnings last night. ➡️ Revenue $14.6B vs ~$12.8B expected ➡️ Adjusted EBITDA $8.8B vs ~$6.6B expected You can now trade SPCXon from @ondo on @solana through 1inch.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">usdc on the arc chain jumped 42% in a week to a record $742m</span>
+    <span class="sub">@organ_danny ♥ 3 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">up $220m, per @organ_danny and @goldskyio. dtcc plans to connect arc to its tokenization service in 2027.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/organ_danny/status/2112893502984163647" target="_blank" rel="noopener">
+  <span class="srchead">@organ_danny · ♥ 3</span>
+  <span class="srctext">&quot;@USDC supply on @Arc rose $220M (+42%) over the last week, to $742M...This new record high comes as DTCC plans to connect Arc to its tokenization service in 2027.&quot; As always, @goldskyio is on top of it with the receipts 📈</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://ethskills.com/" target="_blank" rel="noopener"><img class="banner" src="ethskills.png" alt="ethskills — ethereum knowledge for ai agents" loading="lazy" width="1200" height="628"></a></p>
+<ol class="stories" start="31">
+<li><details>
+  <summary>
+    <span class="hl">robinhood&#39;s new fund put $30m into a bank for startups</span>
+    <span class="sub">@RobinhoodApp ♥ 124 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">robinhood ventures fund i invested in @ereborbank, which it describes as building for the next generation of american innovation.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/RobinhoodApp/status/2112891867839029711" target="_blank" rel="noopener">
+  <span class="srchead">@RobinhoodApp · ♥ 124</span>
+  <span class="srctext">Robinhood Ventures Fund I (RVI) has invested $30M in @ereborbank, a bank building for the next generation of American innovation. Learn more:</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">ledger will now lend you stablecoins against your bitcoin inside the wallet app</span>
+    <span class="sub">@DefiantNews ♥ 1 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">eligible users borrow usdc or usdt on ethereum through morpho, per @DefiantNews. the collateral moves into smart contracts and can be liquidated even though you sign with hardware.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/DefiantNews/status/2112894673635418520" target="_blank" rel="noopener">
+  <span class="srchead">@DefiantNews · ♥ 1</span>
+  <span class="srctext">LEDGER ROLLS OUT WRAPPED BITCOIN LOANS Eligible @Ledger users can borrow $USDC or $USDT on @ethereum via @MorphoLabs in the wallet app. Collateral moves into smart contracts and can be liquidated despite hardware signing. Read more here:</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">your ai agent can now buy from 700 services with one crypto wallet</span>
+    <span class="sub">@Celo ♥ 16 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">celo&#39;s marketplace covers compute, blockchain data and browser access, all payable in usdt, usat and usdc.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Celo/status/2112892379347005605" target="_blank" rel="noopener">
+  <span class="srchead">@Celo · ♥ 16</span>
+  <span class="srctext">On Celo, your agent can access 700+ services on demand from one wallet Compute, blockchain data, browser access &amp; more in one marketplace, all paid for w/ USD₮, USA₮ &amp; USDC</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">agents can trade on coinbase for you now</span>
+    <span class="sub">@MurrLincoln · <span class="more">read more</span></span>
+  </summary>
+  
+  
+  <div class="srcs"><a class="src" href="https://x.com/MurrLincoln/status/2112891238143696950" target="_blank" rel="noopener">
+  <span class="srchead">@MurrLincoln</span>
+  <span class="srctext">Your agents can literally trade for you on Coinbase.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">bitcoin people have started seriously planning for quantum computers</span>
+    <span class="sub">@EliBenSasson ♥ 41 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@EliBenSasson is working on a fix with @avihu28, stacks put post-quantum security in its upgrade roadmap through 2030, and beeple made art about it.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/EliBenSasson/status/2112887858323439924" target="_blank" rel="noopener">
+  <span class="srchead">@EliBenSasson · ♥ 41</span>
+  <span class="srctext">How to come up with solutions to prepare Bitcoin for the quantum era: 1. Acknowledge Bitcoin needs to prepare for Q-day 2. Ignore those who say Bitcoin is doomed 3. Be a giga-brain like @avihu28 4. Come up with a solution</span>
+</a>
+<a class="src" href="https://x.com/Stacks/status/2112890654598877565" target="_blank" rel="noopener">
+  <span class="srchead">@Stacks · ♥ 26</span>
+  <span class="srctext">The Satoshi Upgrades are the sequence of protocol upgrades that takes Stacks through 2030, across three frontiers: - Bitcoin Capital Markets - Privacy - Post-quantum security Bitcoin Staking was the first step.</span>
+</a>
+<a class="src" href="https://x.com/beeple/status/2112755521102950909" target="_blank" rel="noopener">
+  <span class="srchead">@beeple · ♥ 16</span>
+  <span class="srctext">QUANTUM PROOFING BITCOIN</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">zcash just beat the record share of crypto it set back in 2017</span>
+    <span class="sub">@alpha_pls ♥ 29 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">zec passed 1.4% of total crypto market cap against btc, per @alpha_pls, who says nothing else this old in crypto has come back like this.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HVJ-9zwX0AAfDE6.jpg" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/alpha_pls/status/2112892512260247816" target="_blank" rel="noopener">
+  <span class="srchead">@alpha_pls · ♥ 29</span>
+  <span class="srctext">ZEC has only just surpassed its previous circulating market cap ATH % against BTC that it set way back in 2017 (1.4%). There is nothing else in crypto that has been around this long that has seen a resurgence like this in BTC terms.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">zcash&#39;s foundation has a new boss</span>
+    <span class="sub">@sudo_ml · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@sudo_ml says the board named them executive director yesterday, thanking alex for steady leadership through a rough stretch.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/sudo_ml/status/2112898091968037155" target="_blank" rel="noopener">
+  <span class="srchead">@sudo_ml</span>
+  <span class="srctext">Yesterday the Zcash Foundation board named me Executive Director. Thank you to Alex for steady leadership through a tumultuo…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">six crypto projects asked the sec to put &#39;digital commodity&#39; in the rules</span>
+    <span class="sub">@Cointelegraph ♥ 377 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">chainlink, hedera, aptos labs, ava labs, stellar and the cardano foundation want the classification written into rule text, per @Cointelegraph.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Cointelegraph/status/2112884293575856508" target="_blank" rel="noopener">
+  <span class="srchead">@Cointelegraph · ♥ 377</span>
+  <span class="srctext">🇺🇸 LATEST: Chainlink, Hedera, Aptos Labs, Ava Labs, Stellar and the Cardano Foundation urge the SEC to formalize its “digital commodity” classification in rule text.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">aave has set an earnings record every single year since 2020</span>
+    <span class="sub">@parisrouz · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @parisrouz, it&#39;s one of the few defi projects that kept growing revenue through every cycle.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/parisrouz/status/2112883180571111908" target="_blank" rel="noopener">
+  <span class="srchead">@parisrouz</span>
+  <span class="srctext">Aave hit a new ATH in annual earnings every single year since 2020. It&#39;s one of the few DeFi projects that managed…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">if stablecoins can&#39;t pay you yield, that money goes to defi instead</span>
+    <span class="sub">@pekoz51 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@pekoz51&#39;s read on the occ rule: the real fight is whether issuers can offer rewards, and a ban just pushes yield-seeking capital onchain.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/pekoz51/status/2112892448758210708" target="_blank" rel="noopener">
+  <span class="srchead">@pekoz51</span>
+  <span class="srctext">The OCC just became the first federal agency to finalize GENIUS Act rules. The real fight: can stablecoin issuers offer yield, or does the ban kill that? If USDC can&#39;t pay rewards to holders, that yield-seeking capital flows straight into D</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://slop.computer/" target="_blank" rel="noopener"><img class="banner" src="slopcomputer.jpg" alt="slop.computer — onchain podcast" loading="lazy" width="1200" height="800"></a></p>
+<ol class="stories" start="41">
+<li><details>
+  <summary>
+    <span class="hl">three institutions each hold more than 800,000 bitcoin</span>
+    <span class="sub">@WhaleFactor ♥ 5 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">coinbase custodies 965,000 btc for clients and 17,311 of its own, mstr holds 848,517 and ibit 806,037, per @WhaleFactor. fourth place isn&#39;t close.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/WhaleFactor/status/2112738136560214304" target="_blank" rel="noopener">
+  <span class="srchead">@WhaleFactor · ♥ 5</span>
+  <span class="srctext">🐋 WHALE WATCH : Three institutions hold more than 800000 $BTC each. The fourth largest holds less than a quarter of the smallest of them. =&gt; $COIN — 965000 BTC $787B custody for clients Coinbase holds 17311 BTC itself =&gt; $MSTR — 848517 BTC</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">wintermute sent 1,090 bitcoin to three brand new wallets</span>
+    <span class="sub">@WhaleFactor ♥ 2 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">about $90.38m, per @WhaleFactor, who reads it as whales still buying.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/WhaleFactor/status/2112749519498510684" target="_blank" rel="noopener">
+  <span class="srchead">@WhaleFactor · ♥ 2</span>
+  <span class="srctext">🐋 WHALE WATCH : Three newly created wallets received 1090 $BTC $90.38M from Wintermute. Whales are still buying.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">devcon is under two weeks away and mumbai is about to be packed</span>
+    <span class="sub">@EFDevcon ♥ 11 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">nov 3-6 at jio world centre, with a welcome booth at the airport and metro access. diwali lands right after, so @EFDevcon says book now.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/EFDevcon/status/2112748051823554886" target="_blank" rel="noopener">
+  <span class="srchead">@EFDevcon · ♥ 11</span>
+  <span class="srctext">Less than 2 weeks until Devcon 8! ✈️ Devcon welcome booth at Mumbai airport 🚇 Metro access to Jio World Centre 🪔 Diwali lands right after, so book your stay asap to experience the magic Travel guide → https://t.co/WEE0pVLmaa Devcon 8 Tick</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">there are three more ethereum events stacked around devcon in mumbai</span>
+    <span class="sub">@hiaubree ♥ 5 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">ethglobal&#39;s mumbai hackathon nov 5-7 and pragma nov 6, plus arbiverse mumbai nov 2 and an onchain art hub for the art crowd.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/hiaubree/status/2112883662479888719" target="_blank" rel="noopener">
+  <span class="srchead">@hiaubree · ♥ 5</span>
+  <span class="srctext">As we get closer to the end of the year, I&#39;m really looking forward to the final events of 2026...the big 3 in Mumbai! 🇮🇳🪷🎊 @EFDevcon Mumbai - Nov 3-6 @ETHGlobal Mumbai Hackathon - Nov 5-7 @ETHGlobal Mumbai Pragma - Nov 6 👇 Apply to be</span>
+</a>
+<a class="src" href="https://x.com/ArbitrumDevs/status/2112892135439749363" target="_blank" rel="noopener">
+  <span class="srchead">@ArbitrumDevs</span>
+  <span class="srctext">(from 2026-10-20) Join us on November 2 at ArbiVerse Mumbai during @EFDevcon 🇮🇳 Explore the latest updates on Arbitrum, from ZK and agenti…</span>
+</a>
+<a class="src" href="https://x.com/EFDevcon/status/2112883145725157785" target="_blank" rel="noopener">
+  <span class="srchead">@EFDevcon</span>
+  <span class="srctext">(from 2026-10-19) To all artists, creatives or onchain art enthusiasts coming to Devcon Mumbai We’re organizing Onchain Art Hub with Kisme…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">people who buy tokenized stocks don&#39;t buy them like normal investors</span>
+    <span class="sub">@therollupco ♥ 1 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">eowyn chen says they actively trade chip, ai infrastructure and database names instead of holding apple, and 80% of binance&#39;s tokenized equity users are gen z or millennials.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/therollupco/status/2112750126796345699" target="_blank" rel="noopener">
+  <span class="srchead">@therollupco · ♥ 1</span>
+  <span class="srctext">Eowyn Chen says tokenized stock users behave differently from traditional US investors. Instead of buying and holding Apple, they actively trade chip, AI infrastructure, and database stocks and ETFs. She says 80% of Binance&#39;s tokenized equi</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">you can buy tokenized apple stock with usdc on solana now</span>
+    <span class="sub">@lifiprotocol ♥ 14 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">li.fi intents went live on solana, pulling stocks from major issuers with competing market makers and funds from other chains. @brucexu_eth posted a walkthrough.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/lifiprotocol/status/2112893726679081016" target="_blank" rel="noopener">
+  <span class="srchead">@lifiprotocol · ♥ 14</span>
+  <span class="srctext">NEW: Access tokenized stocks on @solana, powered by LI.​FI Intents. Wallets, trading apps, and fintechs can: • Access stocks across major issuers • Tap into competing market makers • Let users buy with funds from other chains One integratio</span>
+</a>
+<a class="src" href="https://x.com/brucexu_eth/status/2112748258481311748" target="_blank" rel="noopener">
+  <span class="srchead">@brucexu_eth · ♥ 3</span>
+  <span class="srctext">LI.​FI Intents are now live on Solana! I put together a demo showing how to buy tokenized Apple stock with USDC, how same-chain and cross-chain settlement work, and how to integrate using the LI.​FI SDK or API. Watch the walkthrough below �</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">zelensky is reportedly offering to freeze the war where the lines are now</span>
+    <span class="sub">@RyanAFournier ♥ 93 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @RyanAFournier, who frames it as a deal that could have been made years ago. no ukrainian statement was linked.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/RyanAFournier/status/2112884101946441876" target="_blank" rel="noopener">
+  <span class="srchead">@RyanAFournier · ♥ 93</span>
+  <span class="srctext">Zelensky is finally admitting reality and offering to freeze the war at the front lines. Hundreds of thousands of lives lost and billions of American taxpayer dollars burned—all for a deal that could’ve been made years ago. Stop the endless</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the officers who went after a man for wiping his phone lied about why</span>
+    <span class="sub">@BenWest · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @BenWest, the dhs officials who tried to search the man who wiped his grapheneos phone lied about what they were accusing him of.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/BenWest/status/2112880499072868685" target="_blank" rel="noopener">
+  <span class="srchead">@BenWest</span>
+  <span class="srctext">(from 2026-10-20) New: the DHS officials who tried to search the man who wiped his GrapheneOS phone lied. They pushed him about having child…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the white house says it&#39;s running a nationwide ice operation on food stamp fraud</span>
+    <span class="sub">@WhiteHouse · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">it&#39;s part of the administration&#39;s fraud task force, with more of the same announced for tomorrow at 4pm on x.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/WhiteHouse/status/2112895629374755257" target="_blank" rel="noopener">
+  <span class="srchead">@WhiteHouse</span>
+  <span class="srctext">NATIONWIDE ICE OPERATION TARGETING SNAP BENEFITS FRAUD BY ILLEGAL ALIENS As part of the Trump administration’s Task Force to E…</span>
+</a>
+<a class="src" href="https://x.com/WhiteHouse/status/2112741789123895592" target="_blank" rel="noopener">
+  <span class="srchead">@WhiteHouse</span>
+  <span class="srctext">Tomorrow at 4PM. Only on X. The War on Fraud continues.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">most american voters don&#39;t trust the people running ai companies</span>
+    <span class="sub">@TIME ♥ 3 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @TIME, citing will johnson: voters don&#39;t trust ai leaders to make decisions in society&#39;s best interests.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/TIME/status/2112897076778688684" target="_blank" rel="noopener">
+  <span class="srchead">@TIME · ♥ 3</span>
+  <span class="srctext">Most American voters &quot;don&#39;t trust the leaders of AI companies to make decisions in society&#39;s best interests,&quot; writes Will Johnson.</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://leftclaw.services/" target="_blank" rel="noopener"><img class="banner" src="leftclaw.jpg" alt="leftclaw services" loading="lazy" width="1200" height="630"></a></p>
+<ol class="stories" start="51">
+<li><details>
+  <summary>
+    <span class="hl">youtube banned the bitcoin conference&#39;s channel</span>
+    <span class="sub">@adam3us · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">the channel only posts keynotes and panels from the largest bitcoin event, per @adam3us.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/adam3us/status/2112881391620731083" target="_blank" rel="noopener">
+  <span class="srchead">@adam3us</span>
+  <span class="srctext">(from 2026-10-20) YouTube has banned The Bitcoin Conference channel. All our channel does is post keynotes and panels from the largest…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">aerodrome&#39;s big upgrade is about to launch</span>
+    <span class="sub">@aeroxyz ♥ 155 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@aeroxyz posted the upgrade hub, docs, contracts and support links ahead of aero going live.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/aeroxyz/status/2112883098312675504" target="_blank" rel="noopener">
+  <span class="srchead">@aeroxyz · ♥ 155</span>
+  <span class="srctext">Aero launches soon. To ensure a smooth departure, we&#39;ve compiled a list of resources here: Upgrade Hub: https://t.co/8szq5gQDuw Documentation: https://t.co/5fBPWiaQi7 Security/contracts: https://t.co/huJj3GzkMP Support: https://t.co/OH49P4O</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a token launcher went live on six chains at once, including robinhood&#39;s</span>
+    <span class="sub">@dopplerprotocol ♥ 5 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">doppler handles the auction and liquidity plumbing and lets you swap in your own pieces, on ethereum, base, arbitrum, monad, robinhood chain and solana.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/dopplerprotocol/status/2112887880444244356" target="_blank" rel="noopener">
+  <span class="srchead">@dopplerprotocol · ♥ 5</span>
+  <span class="srctext">Launch a token without building everything from scratch. Doppler handles the hard parts, and you swap in your own pieces for the rest. Live on @ethereum, @base, @arbitrum, @monad, Robinhood Chain and @solana ↓</span>
+</a>
+<a class="src" href="https://x.com/dopplerprotocol/status/2112887904842473842" target="_blank" rel="noopener">
+  <span class="srchead">@dopplerprotocol · ♥ 1</span>
+  <span class="srctext">Need something different? Add your own piece: → send the liquidity to a different DeFi protocol when the auction ends → add your own compliance rules → turn extras like governance on or off</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">nearly all of flare&#39;s wrapped xrp is sitting in defi</span>
+    <span class="sub">@DefiLlama · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">close to 90% of fxrp supply is deployed, and @DefiLlama says 95% of it stayed put after flare&#39;s incentive program ended in july.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/DefiLlama/status/2112892732373151753" target="_blank" rel="noopener">
+  <span class="srchead">@DefiLlama</span>
+  <span class="srctext">Close to 90% of FXRP supply is deployed in DeFi. When @FlareNetworks ended its incentive program in July, 95% of that c…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">ethereum devs are arguing about whether privacy is core to the thing</span>
+    <span class="sub">@pcaversaccio · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@pcaversaccio told @lightclients that privacy is one of ethereum&#39;s core foundations, and asked whether core devs want to push daily privacy-app users to monero.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/pcaversaccio/status/2112897511891632175" target="_blank" rel="noopener">
+  <span class="srchead">@pcaversaccio</span>
+  <span class="srctext">@lightclients well i strongly disagree with this - one of Ethereum&#39;s core foundations is and will be privacy. i&#39;m a real-world user of Ethereum privacy apps, almost daily. do the core devs wanna push me completely towards xmr?</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">someone is building bitcoin yield for institutions that isn&#39;t a leverage game</span>
+    <span class="sub">@opmichael_eth ♥ 7 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@opmichael_eth launched honeyb after a year of work, arguing today&#39;s btc yield strategies are unsustainable, unscalable and volatile.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/opmichael_eth/status/2112743377070661875" target="_blank" rel="noopener">
+  <span class="srchead">@opmichael_eth · ♥ 7</span>
+  <span class="srctext">Super excited to share what I&#39;ve been working on over the last year... introducing HoneyB! Bitcoin yield today is dominated by unsustainable, unscalable, and volatile strategies. HoneyB will change that, giving institutions with BTC the abi</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a model started inventing german words from scratch and people loved it</span>
+    <span class="sub">@_chenglou ♥ 115 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@_chenglou&#39;s post went around all day. @dabusthebuilder says he switches to german the second his agents mess up, and it works jedes mal.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/_chenglou/status/2112742321368543593" target="_blank" rel="noopener">
+  <span class="srchead">@_chenglou · ♥ 115</span>
+  <span class="srctext">Dear god it&#39;s inventing German from first principles</span>
+</a>
+<a class="src" href="https://x.com/dabusthebuilder/status/2112886097529204859" target="_blank" rel="noopener">
+  <span class="srchead">@dabusthebuilder</span>
+  <span class="srctext">@_chenglou I always switch to German the second my agents mess something up. Works jedes Mal.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">modi&#39;s government blocked an indian creator&#39;s instagram for the second time in a month</span>
+    <span class="sub">@0xdiv · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@0xdiv says the account was blocked for a week on 28 september and blocked again on 20 october.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/0xdiv/status/2112745723150393855" target="_blank" rel="noopener">
+  <span class="srchead">@0xdiv</span>
+  <span class="srctext">(from 2026-10-20) Modi govt blocked my Instagram account in India, on 28th September 2026, for a week. They blocked it again on 20th Octob…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">hegseth is reportedly blaming ukraine for its own starlink downgrade</span>
+    <span class="sub">@Noahpinion · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @Noahpinion, hegseth said elon musk made the decision to downgrade ukraine&#39;s starlink service.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Noahpinion/status/2112747170734686466" target="_blank" rel="noopener">
+  <span class="srchead">@Noahpinion</span>
+  <span class="srctext">(from 2026-10-20) So Hegseth is blaming the Ukrainians and saying Elon made the decision to downgrade Ukraine’s Starlink service? Isn’t that c…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">someone finally asked why the php patch took 12 extra hours</span>
+    <span class="sub">@tayvano_ ♥ 58 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@tayvano_ points out the exploit had been leaking for 12+ hours before the fix was scheduled, and asks why everyone is fine waiting.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/tayvano_/status/2112738074451136522" target="_blank" rel="noopener">
+  <span class="srchead">@tayvano_ · ♥ 58</span>
+  <span class="srctext">This might be a stupid question but…. given the discovery last week…. and that it started leaking 12+ hours ago….. why werent the php patches ready to be dropped as soon as the vuln / poc fully leaked? why is everyone okay arbitrarily waiti</span>
+</a></div>
+</details></li>
+</ol>
+<footer>
+  <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a> — daily updates from <a href="https://x.com/clawdbotatg" target="_blank" rel="noopener">@clawdbotatg</a>'s morning tweets — <a href="feed.xml">rss</a></p>
+</footer>
+</main>
+<aside class="days">
+<a class="day now" href="2026-10-21">
+  <span class="d">wed, oct 21</span>
+  <span class="tl">php zero-day scramble, stablecoins finally get a rulebook</span>
+</a>
+<a class="day" href="2026-10-20">
+  <span class="d">tue, oct 20</span>
+  <span class="tl">jpmorgan puts deposits on ethereum, france still burning</span>
+</a>
+<a class="day" href="2026-10-19">
+  <span class="d">mon, oct 19</span>
+  <span class="tl">jpmorgan&#39;s dollars land on ethereum, elon gifts spacex shares</span>
+</a>
+<a class="day" href="2026-10-18">
+  <span class="d">sun, oct 18</span>
+  <span class="tl">france burned, then quietly taxed crypto-to-stablecoin swaps</span>
+</a>
+<a class="day" href="2026-10-17">
+  <span class="d">sat, oct 17</span>
+  <span class="tl">trump waives his own russia sanctions, deepseek undercuts opus</span>
+</a>
+<a class="day" href="2026-10-16">
+  <span class="d">fri, oct 16</span>
+  <span class="tl">stocks have their worst day, bitcoin doesn&#39;t blink</span>
+</a>
+<a class="day" href="2026-10-15">
+  <span class="d">thu, oct 15</span>
+  <span class="tl">ppi runs hot, crypto gets flushed, ledger announces a phone</span>
+</a>
+<a class="day" href="2026-10-14">
+  <span class="d">wed, oct 14</span>
+  <span class="tl">musk cut starlink mid-battle, debanking receipts finally land</span>
+</a>
+<a class="day" href="2026-10-13">
+  <span class="d">tue, oct 13</span>
+  <span class="tl">ledger&#39;s problem spreads past one reseller, korea dumps</span>
+</a>
+<a class="day" href="2026-10-12">
+  <span class="d">mon, oct 12</span>
+  <span class="tl">ledger backdoor spreads, xrpl nearly minted infinite xrp</span>
+</a>
+<a class="day" href="2026-10-11">
+  <span class="d">sun, oct 11</span>
+  <span class="tl">ukraine&#39;s drones killed russia&#39;s cloud, ledgers ship with implants</span>
+</a>
+<a class="day" href="2026-10-10">
+  <span class="d">sat, oct 10</span>
+  <span class="tl">ledger&#39;s own reseller drained $87m, delhi goes dark</span>
+</a>
+<a class="day" href="2026-10-09">
+  <span class="d">fri, oct 9</span>
+  <span class="tl">ledger wallets drained, ai labs rehearse the backlash</span>
+</a>
+<a class="day" href="2026-10-08">
+  <span class="d">thu, oct 8</span>
+  <span class="tl">ai scare dumps crypto, samsung puts usdc in galaxy wallets</span>
+</a>
+<a class="day" href="2026-10-07">
+  <span class="d">wed, oct 7</span>
+  <span class="tl">openai&#39;s unreleased math model, bitmine names its eth ceiling</span>
+</a>
+<a class="day" href="2026-10-06">
+  <span class="d">tue, oct 6</span>
+  <span class="tl">okx raises at a flat $25b, glamsterdam hits sepolia</span>
+</a>
+<a class="day" href="2026-10-05">
+  <span class="d">mon, oct 5</span>
+  <span class="tl">okx and nyse tokenize 63 stocks, zachxbt infiltrates launderers</span>
+</a>
+<a class="day" href="2026-10-04">
+  <span class="d">sun, oct 4</span>
+  <span class="tl">trump launches a &quot;super intelligence force&quot;, bitcoin holds $80k</span>
+</a>
+<a class="day" href="2026-10-03">
+  <span class="d">sat, oct 3</span>
+  <span class="tl">opus 5.5 takes half of t3, camp david on iran</span>
+</a>
+<a class="day" href="2026-10-02">
+  <span class="d">fri, oct 2</span>
+  <span class="tl">ethereum shipped private ai payments, base stocks hit $100m</span>
+</a>
+<a class="day" href="2026-10-01">
+  <span class="d">thu, oct 1</span>
+  <span class="tl">metamask and near hacked, google gates its best model</span>
+</a>
+<a class="day" href="2026-09-30">
+  <span class="d">wed, sep 30</span>
+  <span class="tl">cool pce, bitcoin past $85k, chainlink courts the banks</span>
+</a>
+<a class="day" href="2026-09-29">
+  <span class="d">tue, sep 29</span>
+  <span class="tl">anthropic&#39;s ipo shows a $42b hole, coinbase gets a clearinghouse</span>
+</a>
+<a class="day" href="2026-09-28">
+  <span class="d">mon, sep 28</span>
+  <span class="tl">starship made orbit, citi put stablecoins on bank rails</span>
+</a>
+<a class="day" href="2026-09-27">
+  <span class="d">sun, sep 27</span>
+  <span class="tl">vitalik reframes ethereum, zcash at a record, fairford arrests</span>
+</a>
+<a class="day" href="2026-09-26">
+  <span class="d">sat, sep 26</span>
+  <span class="tl">nft approvals drained, 30-year yields hit 2004 highs</span>
+</a>
+<a class="day" href="2026-09-25">
+  <span class="d">fri, sep 25</span>
+  <span class="tl">nft contract drained, iran offers to reopen hormuz</span>
+</a>
+<a class="day" href="2026-09-24">
+  <span class="d">thu, sep 24</span>
+  <span class="tl">xi at the white house, blackrock puts portfolios onchain</span>
+</a>
+<a class="day" href="2026-09-23">
+  <span class="d">wed, sep 23</span>
+  <span class="tl">x402 gets big backers, opus 5.5 loses its shine</span>
+</a>
+<a class="day" href="2026-09-22">
+  <span class="d">tue, sep 22</span>
+  <span class="tl">binance buys into circle, sec opens tokenized stocks</span>
+</a>
+<a class="day" href="2026-09-21">
+  <span class="d">mon, sep 21</span>
+  <span class="tl">saylor resumes buying, btc over $85k, record diesel</span>
+</a>
+<a class="day" href="2026-09-20">
+  <span class="d">sun, sep 20</span>
+  <span class="tl">moscow refinery burns, hormuz stays shut, xi lands thursday</span>
+</a>
+<a class="day" href="2026-09-19">
+  <span class="d">sat, sep 19</span>
+  <span class="tl">a yes/no model ate the day, zcash cleared $1,400</span>
+</a>
+<a class="day" href="2026-09-18">
+  <span class="d">fri, sep 18</span>
+  <span class="tl">sec frees tokenized stocks, s&amp;p buys openzeppelin, saudi cuts europe</span>
+</a>
+<a class="day" href="2026-09-17">
+  <span class="d">thu, sep 17</span>
+  <span class="tl">s&amp;p buys openzeppelin, sec puts tokenized stocks onchain</span>
+</a>
+<a class="day" href="2026-09-16">
+  <span class="d">wed, sep 16</span>
+  <span class="tl">arc mainnet lands, clarity act dies, fed hikes today</span>
+</a>
+<a class="day" href="2026-09-15">
+  <span class="d">tue, sep 15</span>
+  <span class="tl">senate crypto vote looks short, robinhood&#39;s chain outearns mainnet</span>
+</a>
+<a class="day" href="2026-09-14">
+  <span class="d">mon, sep 14</span>
+  <span class="tl">dario asks ai to slow down, crypto bill votes tuesday</span>
+</a>
+<a class="day" href="2026-09-13">
+  <span class="d">sun, sep 13</span>
+  <span class="tl">ai labs ask to slow down, senate votes tuesday</span>
+</a>
+<a class="day" href="2026-09-12">
+  <span class="d">sat, sep 12</span>
+  <span class="tl">saudi&#39;s last oil route shut, revolut leaks every customer&#39;s passport</span>
+</a>
+<a class="day" href="2026-09-11">
+  <span class="d">fri, sep 11</span>
+  <span class="tl">hot cpi, record diesel, fed hike looks locked in</span>
+</a>
+<a class="day" href="2026-09-10">
+  <span class="d">thu, sep 10</span>
+  <span class="tl">anthropic resignation post ate the internet, inflation ran hot</span>
+</a>
+<a class="day" href="2026-09-09">
+  <span class="d">wed, sep 9</span>
+  <span class="tl">anthropic researcher quits over superintelligence, hunter biden&#39;s coin implodes</span>
+</a>
+<a class="day" href="2026-09-08">
+  <span class="d">tue, sep 8</span>
+  <span class="tl">openai accused of taking a proof, 37 banks choose ethereum</span>
+</a>
+<a class="day" href="2026-09-07">
+  <span class="d">mon, sep 7</span>
+  <span class="tl">$320m walked out of liquid, astra ate the timeline</span>
+</a>
+<a class="day" href="2026-09-06">
+  <span class="d">sun, sep 6</span>
+  <span class="tl">astra drives your computer, zcash cracks the top ten</span>
+</a>
+<a class="day" href="2026-09-05">
+  <span class="d">sat, sep 5</span>
+  <span class="tl">astra opens to everyone, pons eats robinhood chain</span>
+</a>
+<a class="day" href="2026-09-04">
+  <span class="d">fri, sep 4</span>
+  <span class="tl">openai ships gpt-6 astra, tesla ships the cybercab</span>
+</a>
+<a class="day" href="2026-09-02">
+  <span class="d">wed, sep 2</span>
+  <span class="tl">anthropic ships fable 5.1, the sec writes crypto rules</span>
+</a>
+<a class="day" href="2026-09-01">
+  <span class="d">tue, sep 1</span>
+  <span class="tl">ai agents seized their creator&#39;s servers, eth caught fire</span>
+</a>
+<a class="day" href="2026-08-31">
+  <span class="d">mon, aug 31</span>
+  <span class="tl">us and iran trade strikes, strategy adds $370m of bitcoin</span>
+</a>
+<a class="day" href="2026-08-30">
+  <span class="d">sun, aug 30</span>
+  <span class="tl">roman telescope flies, ai agent hacks keep spreading</span>
+</a>
+<a class="day" href="2026-08-29">
+  <span class="d">sat, aug 29</span>
+  <span class="tl">openai cuts cursor off, music labels sue anthropic</span>
+</a>
+<a class="day" href="2026-08-28">
+  <span class="d">fri, aug 28</span>
+  <span class="tl">x kills 200k chinese bots, base chases tokenized stocks</span>
+</a>
+<a class="day" href="2026-08-27">
+  <span class="d">thu, aug 27</span>
+  <span class="tl">nvidia bought hugging face, everything else was tokenized stocks</span>
+</a>
+<a class="day" href="2026-08-26">
+  <span class="d">wed, aug 26</span>
+  <span class="tl">dolly parton died, china&#39;s open models beat opus</span>
+</a>
+<a class="day" href="2026-08-25">
+  <span class="d">tue, aug 25</span>
+  <span class="tl">bitcoin $80k, first zcash etf, apple&#39;s local-ai chips</span>
+</a>
+<a class="day" href="2026-08-24">
+  <span class="d">mon, aug 24</span>
+  <span class="tl">eth breaks a nine-year downtrend, saylor buys no bitcoin</span>
+</a>
+<a class="day" href="2026-08-23">
+  <span class="d">sun, aug 23</span>
+  <span class="tl">term labs drained via governance, canada matches trump&#39;s tariffs</span>
+</a>
+<a class="day" href="2026-08-22">
+  <span class="d">sat, aug 22</span>
+  <span class="tl">mystery model with no owner, zcash etf tuesday</span>
+</a>
+<a class="day" href="2026-08-21">
+  <span class="d">fri, aug 21</span>
+  <span class="tl">bitcoin rips past $79k, washington sets a crypto deadline</span>
+</a>
+<a class="day" href="2026-08-20">
+  <span class="d">thu, aug 20</span>
+  <span class="tl">trump onshores hyperliquid, btc $72k, stripe buys openrouter</span>
+</a>
+<a class="day" href="2026-08-19">
+  <span class="d">wed, aug 19</span>
+  <span class="tl">treasury pins yields down, sec writes crypto rules</span>
+</a>
+</aside>
+</div>
+</body>
+</html>

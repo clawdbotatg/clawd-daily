@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gmsers · 2026-10-23</title>
+<meta name="description" content="ethereum&#39;s next upgrade just got pulled off the test schedule with no new date">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="alternate" type="application/rss+xml" title="gmsers" href="https://gmsers.com/feed.xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:site_name" content="gmsers">
+<meta property="og:url" content="https://gmsers.com/2026-10-23">
+<meta property="og:title" content="gmsers · Friday, October 23, 2026">
+<meta property="og:description" content="ethereum&#39;s next upgrade just got pulled off the test schedule with no new date">
+<meta property="og:image" content="https://gmsers.com/og/2026-10-23.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gmsers.com/og/2026-10-23.png">
+<style>
+  /* gmsers is dark, always: black page, white text, lobster-red links */
+  :root { --paper:#000; --ink:#f4f4f2; --muted:#9a9ea6; --faint:#242629; --accent:#ff4b33; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--paper); color:var(--ink); max-width:1240px; margin:0 auto; padding:22px 18px 60px;
+         font:18px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  /* main list + right rail of days; rail stacks below on phones */
+  .wrap { display:flex; gap:44px; align-items:flex-start; margin-top:16px; }
+  .wrap main { flex:1; min-width:0; }
+  aside.days { width:270px; flex:none; position:sticky; top:18px; max-height:calc(100vh - 36px);
+               overflow:auto; scrollbar-width:none; }
+  aside.days::-webkit-scrollbar { display:none; }
+  a.day { display:block; padding:9px 0; border-bottom:1px solid var(--faint); text-decoration:none; }
+  a.day .d { display:block; color:var(--ink); font-weight:700; font-size:.85rem; }
+  a.day.now .d { color:var(--accent); }
+  a.day .tl { display:block; color:var(--muted); font-size:.8rem; line-height:1.35; margin-top:1px; }
+  a.day:hover .d { color:var(--accent); }
+  @media (max-width:900px) {
+    .wrap { display:block; }
+    aside.days { width:auto; position:static; max-height:none; margin-top:30px;
+                 border-top:2px solid var(--ink); padding-top:8px; }
+  }
+  .masthead { position:relative; padding-bottom:10px; border-bottom:2px solid var(--ink); }
+  .mrow { display:flex; align-items:flex-end; gap:16px; flex-wrap:wrap; }
+  .masthead h1 { font-size:2.4rem; font-weight:800; letter-spacing:-.02em; line-height:1; }
+  .masthead h1 a { color:var(--ink); text-decoration:none; }
+  .masthead h1 .gm { color:var(--accent); }
+  .masthead h1 .dotcom { color:var(--muted); }
+  .pfp { width:64px; height:64px; border-radius:12px; flex:none; }
+  .dateline { position:absolute; top:0; right:0; color:var(--muted); font-size:.8rem; text-align:right; }
+  ol.stories { margin-top:16px; padding-left:2em; }
+  ol.stories li { padding:7px 0; }
+  ol.stories li::marker { color:var(--muted); font-size:.85rem; }
+  summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none; }
+  summary::-webkit-details-marker { display:none; }
+  .hl { font-size:1.2rem; font-weight:600; letter-spacing:-.01em; line-height:1.3; }
+  .sub { display:block; color:var(--muted); font-size:.78rem; margin-top:2px; }
+  .sub .more { color:var(--accent); }
+  details[open] .sub .more { opacity:.5; }
+  .dek { font-size:1rem; line-height:1.5; margin:7px 0 2px; max-width:46em; }
+  .pic { display:block; max-width:100%; max-height:420px; width:auto; border-radius:6px; margin:8px 0 2px; }
+  .srcs { margin:6px 0 4px; }
+  a.src { display:block; text-decoration:none; color:var(--ink); border-left:2px solid var(--faint);
+          padding:5px 10px; margin-top:6px; font-size:.84rem; }
+  a.src:hover { border-left-color:var(--accent); }
+  .srchead { display:block; font-size:.74rem; font-weight:600; color:var(--accent); margin-bottom:1px; }
+  .srctext { color:var(--ink); opacity:.85; }
+  footer { margin-top:32px; color:var(--muted); font-size:.78rem; }
+  footer a { color:var(--accent); }
+  .powered { margin-top:14px; }
+  .powered a { color:var(--accent); text-decoration:none; }
+  .ad { margin:26px 0; }
+  .show { margin:0 0 22px; }
+  .show .twitter-tweet { margin:0 auto !important; }
+  .show video { display:block; width:100%; max-width:560px; margin:0 auto; border-radius:12px; background:#000; }
+  .ad .banner { display:block; width:100%; height:auto; border-radius:12px; }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="mrow">
+    <img class="pfp" src="gmsers.jpg" alt="gmsers" width="64" height="64">
+    <h1><a href="index.html"><span class="gm">gm</span>sers<span class="dotcom">.com</span></a></h1>
+    <div class="dateline">Friday, October 23, 2026 · no. 67</div>
+  </div>
+</header>
+<div class="wrap">
+<main>
+<!-- edition:2026-10-23 -->
+<ol class="stories" start="1">
+<li><details>
+  <summary>
+    <span class="hl">ethereum&#39;s next upgrade just got pulled off the test schedule with no new date</span>
+    <span class="sub">@pekoz51 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">core devs yanked glamsterdam off hoodi&#39;s oct 26 slot after chainsecurity found the gas repricing could make existing contracts permanently log failed operations.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HVUTP9BWAAEozHI.jpg" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/pekoz51/status/2113616795382738984" target="_blank" rel="noopener">
+  <span class="srchead">@pekoz51</span>
+  <span class="srctext">Ethereum devs just pulled the Glamsterdam test off Hoodi&#39;s Oct 26 calendar. Security researchers found gas repricing rules could let existing contracts permanently record failed operations. The chain securing $300B+ chose caution over speed</span>
+</a>
+<a class="src" href="https://x.com/chain_security/status/2113610659623485614" target="_blank" rel="noopener">
+  <span class="srchead">@chain_security</span>
+  <span class="srctext">glamsterdam was supposed to hit the hoodi testnet monday. core devs pulled it yesterday. no new date. chainsecurity show…</span>
+</a>
+<a class="src" href="https://x.com/klarakova/status/2113609472979657148" target="_blank" rel="noopener">
+  <span class="srchead">@klarakova</span>
+  <span class="srctext">ETHEREUM JUST PAUSED ITS GLAMSTERDAM TEST. Ethereum called off the October 26 Glamsterdam test on the Hoodi test network a…</span>
+</a>
+<a class="src" href="https://x.com/0xRajeev/status/2113463683309600795" target="_blank" rel="noopener">
+  <span class="srchead">@0xRajeev</span>
+  <span class="srctext">(from 2026-10-22) anyone looking for more information on the issues that delayed the glamsterdam fork on hoodi can find details here:</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the uk told people to stock three days of food and water</span>
+    <span class="sub">@Polymarket ♥ 3.4k · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @polymarket, the warning went out because of the global cybersecurity crisis. it was the most-liked post of the morning by a mile.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Polymarket/status/2113604097127350654" target="_blank" rel="noopener">
+  <span class="srchead">@Polymarket · ♥ 3.4k</span>
+  <span class="srctext">BREAKING: UK government urges citizens to stockpile at least 3 days of emergency food &amp; water amid the global cybersecurity crisis.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">quest diagnostics got hacked and patient data is out</span>
+    <span class="sub">@0xKiwi_ · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @0xkiwi_, quest serves roughly half of all us hospitals and physicians, so the blast radius here is most of american healthcare.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/0xKiwi_/status/2113473125434171892" target="_blank" rel="noopener">
+  <span class="srchead">@0xKiwi_</span>
+  <span class="srctext">Quest Diagnostics has been hacked. Patient data was exposed. They serve roughly half of U.S. hospitals and physicians. I…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">iran says it will sink american warships if the us strikes again</span>
+    <span class="sub">@MarioNawfal ♥ 16 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@marionawfal reports iran told mediators it would go after warships, crews, airports and pipelines across every gulf state, and the journal&#39;s sources treat the threat as backed.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/MarioNawfal/status/2113479070059036916" target="_blank" rel="noopener">
+  <span class="srchead">@MarioNawfal · ♥ 16</span>
+  <span class="srctext">🇮🇷🇺🇸 Iran told mediators that if the US strikes again it will try to sink American warships, kill their crews, and hit airports and pipelines across every Gulf state The threats went through diplomatic channels as well as state TV, and </span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">photos show iran&#39;s strikes burned the hangars holding america&#39;s spare jet parts</span>
+    <span class="sub">@MarioNawfal ♥ 98 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@marionawfal says the canopies hit in bahrain and the uae held the parts that keep jets flying, which leaves the us navy with a one-and-done war.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/MarioNawfal/status/2113474665934942299" target="_blank" rel="noopener">
+  <span class="srchead">@MarioNawfal · ♥ 98</span>
+  <span class="srctext">🇺🇸🇮🇷🇮🇱 Photos of Iran&#39;s strikes on Gulf bases show the hangars where America keeps its spare parts burned... which leaves the US Navy with a one and done war Those canopies in Bahrain and the UAE held the parts that keep jets flying, </span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">an ethereum core dev says he gave up fighting the changes behind the delay</span>
+    <span class="sub">@lightclients ♥ 5 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@lightclients raised privately that such big evm changes were a bad idea, didn&#39;t push it further, and now expects glamsterdam to land more than a year after fusaka.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/lightclients/status/2113606208615743868" target="_blank" rel="noopener">
+  <span class="srchead">@lightclients · ♥ 5</span>
+  <span class="srctext">Since they were proposed, I have asked for analysis of how the EIPs affect mainnet. We have never made such significant EVM changes and things are bound to break. My tweet in June is one of the original motivations for @chain_security to lo</span>
+</a>
+<a class="src" href="https://x.com/lightclients/status/2113606215427375302" target="_blank" rel="noopener">
+  <span class="srchead">@lightclients · ♥ 8</span>
+  <span class="srctext">We&#39;ve spent so much effort on these EIPs, I wonder where we&#39;d be on a more ambitious project like state expiry that actually solves the fundamental problems. Now that we&#39;re delaying Glamsterdam a bit, the fork will probably be more than 1 y</span>
+</a>
+<a class="src" href="https://x.com/lightclients/status/2113621316708553099" target="_blank" rel="noopener">
+  <span class="srchead">@lightclients · ♥ 1</span>
+  <span class="srctext">@zengjiajun_eth you would think so, but even with the state of AI how it is we&#39;re probably gonna miss shipping glam in &lt; 1 yr from previous fork .. so skill issue? maybe. but that&#39;s the status quo</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a well-known security researcher says the people designing ethereum don&#39;t use ethereum</span>
+    <span class="sub">@pcaversaccio ♥ 76 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@pcaversaccio: you can&#39;t fix the right things without skin in the game. he says protocol space and user space keep drifting apart and he needs help pulling them back together.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/pcaversaccio/status/2113612790212808867" target="_blank" rel="noopener">
+  <span class="srchead">@pcaversaccio · ♥ 76</span>
+  <span class="srctext">look the foundational problem with ethereum protocol design is that most of the people designing the protocol don&#39;t actually use ethereum themselves. you can&#39;t fix the right things if you don&#39;t use your own fucking product. you don&#39;t have e</span>
+</a>
+<a class="src" href="https://x.com/pcaversaccio/status/2113618982154727874" target="_blank" rel="noopener">
+  <span class="srchead">@pcaversaccio · ♥ 4</span>
+  <span class="srctext">@lightclients yup, we need to work more side-by-side, but i feel like it&#39;s diverging more and more. i&#39;ll try my best to align &quot;kernel&quot; and &quot;user&quot; space again, but i need help from everyone here tbh</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">uniswap can now pull in liquidity from seven outside places by itself</span>
+    <span class="sub">@Siddhant8903 ♥ 1 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">aggregator hooks went live on ethereum, base and robinhood chain, wrapping curve, fluid, pancakeswap and others as v4 pools; the app and api route through them automatically.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HVUR-EIbAAA7YmC.jpg" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/Siddhant8903/status/2113615663260750135" target="_blank" rel="noopener">
+  <span class="srchead">@Siddhant8903 · ♥ 1</span>
+  <span class="srctext">Uniswap v4 can now route through outside liquidity via Aggregator Hooks, live yesterday on @ethereum, @base, and Robinhood Chain. seven external sources(including @CurveFinance, @0xfluid, @PancakeSwap and others) are wrapped as v4 pools. th</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">ai data centers are hoarding memory chips and your next phone costs more</span>
+    <span class="sub">@r0ktech · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @r0ktech, phone and laptop makers are fighting for scraps, and intel&#39;s ceo says the shortage could run another two to three years.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/r0ktech/status/2113612538541678646" target="_blank" rel="noopener">
+  <span class="srchead">@r0ktech</span>
+  <span class="srctext">Why is your next phone more expensive? One word: AI AI data centres are buying up the world&#39;s memory chips. Phone and laptop makers are fighting for scraps Intel&#39;s CEO says the shortage could last 2-3 more years AI ate your upgrade budget</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">anthropic is using claude to mathematically prove software correct, at scale</span>
+    <span class="sub">@samwcyo · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">its frontier red team posted on doing formal verification with claude — the kind of proof work that normally takes specialists months by hand. 467 retweets.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/samwcyo/status/2113475353742385350" target="_blank" rel="noopener">
+  <span class="srchead">@samwcyo</span>
+  <span class="srctext">New on our Frontier Red Team blog: using Claude to formally verify software at large scale. Formal verification can prove…</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><img class="banner" src="onedollaraudit.png" alt="one dollar audit — a serious security audit, one dollar" loading="lazy" width="1200" height="630"></a></p>
+<ol class="stories" start="11">
+<li><details>
+  <summary>
+    <span class="hl">a core dev says ethereum should stop telling people to just upgrade their contracts</span>
+    <span class="sub">@lightclients ♥ 3 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@lightclients dislikes the &#39;contracts just need to upgrade&#39; and &#39;we&#39;ll break worse things later&#39; lines of thinking, and thinks already-deployed code deserves more respect than that.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/lightclients/status/2113618427889992183" target="_blank" rel="noopener">
+  <span class="srchead">@lightclients · ♥ 3</span>
+  <span class="srctext">@pcaversaccio imo the solution is to respect the user space and exisiting contracts more. i really dislike the recent lines of thinking that &quot;contracts just need to upgrade&quot; or &quot;well we&#39;re gonna break stuff worse in the future&quot;</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">claude is now fully available on google cloud, with new features the same day</span>
+    <span class="sub">@SinaEstavi ♥ 15 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">anthropic-managed claude went generally available there; enterprises pick either immediate feature parity or strict google-managed compliance, per @sinaestavi.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/SinaEstavi/status/2113608785625268652" target="_blank" rel="noopener">
+  <span class="srchead">@SinaEstavi · ♥ 15</span>
+  <span class="srctext">📽️🗣️ Anthropic-managed Claude is now generally available on Google Cloud. New features arrive the same day they launch on Anthropic&#39;s platform. Enterprises can choose: immediate feature parity, or strict compliance managed by Google Cloud</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">cloudflare&#39;s ceo says the next two years of ai cyberattacks will be terrifying</span>
+    <span class="sub">@JacobKerr17 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">matthew prince thinks it ends with a safer internet, and separately expects ai agents to rewrite the business model of the web over the same stretch.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/JacobKerr17/status/2113611069772222736" target="_blank" rel="noopener">
+  <span class="srchead">@JacobKerr17</span>
+  <span class="srctext">(from 2026-10-22) PREDICTION: Cloudflare CEO Matthew Prince (@eastdakota) says AI agents will change the business model of the Internet over the ne…</span>
+</a>
+<a class="src" href="https://x.com/DylanAbruscato/status/2113614747908317317" target="_blank" rel="noopener">
+  <span class="srchead">@DylanAbruscato</span>
+  <span class="srctext">(from 2026-10-22) Cloudflare CEO @eastdakota believes the next two years of AI cyberattacks will be terrifying but will ultimately make the interne…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a jailbroken deepseek model makes gatekeeping the big ai models look pointless</span>
+    <span class="sub">@Suhail ♥ 53 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@suhail says with an abliterated deepseek v4.1 out there, kyc walls no longer hold back cyber capability — the friction just slows down american companies trying to defend themselves.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Suhail/status/2113466930971701395" target="_blank" rel="noopener">
+  <span class="srchead">@Suhail · ♥ 53</span>
+  <span class="srctext">Unfortunately, with access to an abliterated DeepSeek V4.1 model, there is little value to KYC holding back the frontier models now for cyber. In fact, making it hard to secure systems w extra friction in American Enterprise is hurtful to n</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">robinhood&#39;s own chain did over $100b of trading in its first 100 days</span>
+    <span class="sub">@0xMrWzrd · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">that&#39;s $100b+ in dex volume plus 15b in stock tokens traded since launch, per @0xmrwzrd.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/0xMrWzrd/status/2113464129529028984" target="_blank" rel="noopener">
+  <span class="srchead">@0xMrWzrd</span>
+  <span class="srctext">Robinhood Chain so far: - Over $100B in DEX volume - 15B in stock tokens traded in the first 100 days - Cemented as “…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the us quietly let russian diesel back in the day trump announced a deal</span>
+    <span class="sub">@blockchainchick ♥ 23 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@blockchainchick notes trump said on oct 9 that russia would release up to 4.8 million tonnes of diesel, and treasury issued a licence that day — the first since 2022.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/blockchainchick/status/2113608033301311702" target="_blank" rel="noopener">
+  <span class="srchead">@blockchainchick · ♥ 23</span>
+  <span class="srctext">THE RUSSIAN DIESEL DEAL IS POLITICAL THEATRE. HERE&#39;S THE PART NOBODY IS EXPLAINING. Oct 9: Trump announced Russia would release up to 4.8 million tonnes of diesel. The same day, the Treasury issued a licence letting Russian diesel into Amer</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a russian spacecraft flew within a mile of a us satellite</span>
+    <span class="sub">@Polymarket ♥ 200 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">washington called it &#39;threatening behavior&#39;, per @polymarket.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Polymarket/status/2113615946677882914" target="_blank" rel="noopener">
+  <span class="srchead">@Polymarket · ♥ 200</span>
+  <span class="srctext">JUST IN: U.S. accuses Russia of “threatening behavior” after a Russian spacecraft reportedly maneuvered within 1 mile of a U.S.-operated satellite.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">elon musk put $1 billion into the company that now controls cnn</span>
+    <span class="sub">@MMQuimby · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">skydance bought warner bros discovery, and the investment is circulating widely, per @mmquimby.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/MMQuimby/status/2113465584780460490" target="_blank" rel="noopener">
+  <span class="srchead">@MMQuimby</span>
+  <span class="srctext">(from 2026-10-22) Elon Musk just invested $1 BILLION in Skydance, the company that bought Warner Bros. Discovery and now controls CNN. I gen…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">polymarket fired its cmo right after its best week ever</span>
+    <span class="sub">@Cointelegraph ♥ 43 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@cointelegraph says cmo matthew modabber, a close ally of ceo shayne coplan, went out after an internal probe; @williamlegate notes volume, revenue and open interest all just set records.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Cointelegraph/status/2113465609778332046" target="_blank" rel="noopener">
+  <span class="srchead">@Cointelegraph · ♥ 43</span>
+  <span class="srctext">🗞️ Need to catch up on the news? Here&#39;s our top 10 from today: 🔸 Polymarket has reportedly fired CMO Matthew Modabber, a close ally of CEO Shayne Coplan, following an internal probe, per New York Post. 🔹 Chainlink partners with LG Group’</span>
+</a>
+<a class="src" href="https://x.com/williamlegate/status/2113610463879544883" target="_blank" rel="noopener">
+  <span class="srchead">@williamlegate</span>
+  <span class="srctext">(from 2026-10-22) Narrative violation, but @Polymarket just had its best week ever in terms of volume, revenue and average outstanding OI. Cat…</span>
+</a>
+<a class="src" href="https://x.com/trylimitless/status/2113611898382082548" target="_blank" rel="noopener">
+  <span class="srchead">@trylimitless · ♥ 14</span>
+  <span class="srctext">BREAKING: People hate @Polymarket Who could&#39;ve predicted that</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the servers holding a lot of nft art look abandoned</span>
+    <span class="sub">@DicksonWuML · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@dicksonwuml counted 204 dangling servers behind art in 232 collections, with names anyone might be able to re-register. his advice: save the image and the contract address yourself.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HVS36EzWIAEOPhf.jpg" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/DicksonWuML/status/2113623477181636766" target="_blank" rel="noopener">
+  <span class="srchead">@DicksonWuML</span>
+  <span class="srctext">204 servers behind NFT art look like deleted cloud resources, across 232 collections. Names like those can sometimes be re-created by anyone I didn&#39;t test that, and I&#39;m publishing counts only, no hostnames</span>
+</a>
+<a class="src" href="https://x.com/DicksonWuML/status/2113623478125396079" target="_blank" rel="noopener">
+  <span class="srchead">@DicksonWuML</span>
+  <span class="srctext">If you own an NFT you care about, save the image, the libraries it needs and the contract address. The token will outlive the server, but the picture might not Data and code: https://t.co/pqFbjJnVpO Built with AI agents. Corrections welcome</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://larv.ai/" target="_blank" rel="noopener"><img class="banner" src="larv.jpg" alt="larv.ai" loading="lazy" width="1200" height="628"></a></p>
+<ol class="stories" start="21">
+<li><details>
+  <summary>
+    <span class="hl">a honeypot server got hit 14,000 times in six hours</span>
+    <span class="sub">@rileybeans_ · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@rileybeans_ sat and watched it happen, and says almost none of the traffic was what you&#39;d expect.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/rileybeans_/status/2113607388486156737" target="_blank" rel="noopener">
+  <span class="srchead">@rileybeans_</span>
+  <span class="srctext">I spent last night watching my honeypot server get hit 14,000 times in six hours. And almost none of the traffic was…</span>
+</a>
+<a class="src" href="https://x.com/0xmartingale_/status/2113480020664700950" target="_blank" rel="noopener">
+  <span class="srchead">@0xmartingale_</span>
+  <span class="srctext">I spent last night watching my honeypot server get hit 14,000 times in six hours. And almost none of the traffic was…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">india&#39;s payment network has been running on an expired certificate</span>
+    <span class="sub">@privacy_prophet · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@privacy_prophet pointed at upi on exactly the day the whole internet suddenly cares about expiring certificates.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/privacy_prophet/status/2113612564190101812" target="_blank" rel="noopener">
+  <span class="srchead">@privacy_prophet</span>
+  <span class="srctext">Since the entire internet cares about critical certificates today, a reminder @UPI_NPCI has been running on an expired cert s…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">solana moved $5.35 trillion in stablecoins this year</span>
+    <span class="sub">@solana · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">$4.44t of that was usdc, per solana&#39;s own count.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/solana/status/2113465722341150926" target="_blank" rel="noopener">
+  <span class="srchead">@solana</span>
+  <span class="srctext">(from 2026-10-22) The numbers don’t lie. $5.35T in stablecoin volume on @solana in 2026, and counting. ↳ $4.44T moved in $USDC ↳ $599B moved in $US…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the first institutional repo trade just settled on a blockchain</span>
+    <span class="sub">@RealDennisO · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@realdenniso says ascend and m1x global financed usdm1 against circle&#39;s usdc onshore in the us on stellar, arranged through peak execution services.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/RealDennisO/status/2113622202788503813" target="_blank" rel="noopener">
+  <span class="srchead">@RealDennisO</span>
+  <span class="srctext">Breaking: Ascend and M1X Global have completed the first live institutional repo trade on Stellar. M1X Global and Ascend Markets financed USDM1 against Circle USDC onshore in the U.S., arranged through Peak Execution Services. 🏆 First inst</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">grok&#39;s bot can now get into your calendar, reminders and contacts</span>
+    <span class="sub">@diopfode · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">rolling out on ios and android now, per @diopfode.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/diopfode/status/2113468951124480049" target="_blank" rel="noopener">
+  <span class="srchead">@diopfode</span>
+  <span class="srctext">Grok Bot can now use Calendar, Reminders, Contacts, and more apps on your phone. Rolling out now on iOS and Android. https://t.co…</span>
+</a>
+<a class="src" href="https://x.com/milichab/status/2113464700730019937" target="_blank" rel="noopener">
+  <span class="srchead">@milichab</span>
+  <span class="srctext">Grok Bot now integrates with your phone apps</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">1password built a way to give ai agents their own logins</span>
+    <span class="sub">@kentcdodds · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">the 1password for agents platform went out with partners including muse and anthropic, per @kentcdodds.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/kentcdodds/status/2113472688949965122" target="_blank" rel="noopener">
+  <span class="srchead">@kentcdodds</span>
+  <span class="srctext">(from 2026-10-22) Today we announce 1Password for Agents platform, building with companies @Muse, SpaceX Super Intelligence Grok @Bot, @Anthro…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">anthropic&#39;s playbook for an agent that works while you sleep is making the rounds</span>
+    <span class="sub">@Leon_Vandenberg · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">a 15-page pdf laying out eight layers of building your own claude duet — the proactive-agent app anthropic opened as a research preview, per @leon_vandenberg.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Leon_Vandenberg/status/2113609063690911818" target="_blank" rel="noopener">
+  <span class="srchead">@Leon_Vandenberg</span>
+  <span class="srctext">(from 2026-10-22) Anthropic just dropped a 15-page PDF on building your own Claude Duet - 8 layers to an agent that works while you sleep an…</span>
+</a>
+<a class="src" href="https://x.com/Leon_Vandenberg/status/2113609626973261954" target="_blank" rel="noopener">
+  <span class="srchead">@Leon_Vandenberg</span>
+  <span class="srctext">(from 2026-10-21) We’re opening a research preview of Claude Duet, a new app where Claude works as a proactive agent. It comes to you with wha…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">someone built a way to hide your tokenized fund position from the public</span>
+    <span class="sub">@eth_systems ♥ 10 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@eth_systems&#39; proof of concept keeps balances, subscriptions and redemptions off public view while the fund&#39;s transfer agent still sees every one of them.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/eth_systems/status/2113619865378717836" target="_blank" rel="noopener">
+  <span class="srchead">@eth_systems · ♥ 10</span>
+  <span class="srctext">Tokenized money market funds on Ethereum publish their shareholder books: every balance, every subscription and redemption. Our proof of concept hides positions from the public, while the fund&#39;s transfer agent still sees all of them. How it</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the gas fight is really about who eats the cost when the protocol changes</span>
+    <span class="sub">@dOrg_tech · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@dorg_tech says gas was always part of the semantics, and repricing with no opt-out dumps the cost on whoever deployed in good faith.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/dOrg_tech/status/2113603399858167895" target="_blank" rel="noopener">
+  <span class="srchead">@dOrg_tech</span>
+  <span class="srctext">@pcaversaccio @chain_security Gas has always been part of the semantics whether we like it or not. Repricing with no opt-out puts the burden on whoever deployed in good faith.</span>
+</a>
+<a class="src" href="https://x.com/dOrg_tech/status/2113623934033596744" target="_blank" rel="noopener">
+  <span class="srchead">@dOrg_tech</span>
+  <span class="srctext">@chain_security Much better to catch this on Hoodi than on mainnet. Finding every contract that quietly relied on a call running out of gas is going to be a fun hunt.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">ethereum upgrades have slipped before and nothing bad happened</span>
+    <span class="sub">@wmougayar ♥ 20 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@wmougayar&#39;s context: constantinople slid from january to february 2019 after a flaw turned up hours before launch, and dencun slipped too. catching it early is the test working.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/wmougayar/status/2113612410325991654" target="_blank" rel="noopener">
+  <span class="srchead">@wmougayar · ♥ 20</span>
+  <span class="srctext">For context, the postponement of the Glamsterdam testnet upgrade is a standard, precautionary measure with clear historical precedent, not a cause for concern. Ethereum has paused previous rollouts: Constantinople (delayed from January to F</span>
+</a>
+<a class="src" href="https://x.com/wmougayar/status/2113610948057640961" target="_blank" rel="noopener">
+  <span class="srchead">@wmougayar · ♥ 1</span>
+  <span class="srctext">@lightclients There is no earlier as long as it’s caught prior to deployment. The purpose of these stress tests is to find such errors, so it succeeded. With Constantinople in 2019, a security flaw was discovered hours before the mainnet la</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://ethskills.com/" target="_blank" rel="noopener"><img class="banner" src="ethskills.png" alt="ethskills — ethereum knowledge for ai agents" loading="lazy" width="1200" height="628"></a></p>
+<ol class="stories" start="31">
+<li><details>
+  <summary>
+    <span class="hl">some test nodes will still try to run the cancelled upgrade on monday</span>
+    <span class="sub">@chain_security · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">hoodi operators on besu v26.10.0 activate amsterdam on oct 26 unless they update, per @chain_security.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/chain_security/status/2113611247816237243" target="_blank" rel="noopener">
+  <span class="srchead">@chain_security</span>
+  <span class="srctext">(from 2026-10-22) Hoodi node operators: Besu says nodes on v26.10.0 will still activate Amsterdam on Oct. 26 unless they update. Developer…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">ethereum people are relieved a core dev finally said the quiet part out loud</span>
+    <span class="sub">@binji_x ♥ 2 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@binji_x, @lex_node and @ryanberckmans all thanked @lightclients for posting his frustration in public instead of leaving it in private calls.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/binji_x/status/2113620427620659639" target="_blank" rel="noopener">
+  <span class="srchead">@binji_x · ♥ 2</span>
+  <span class="srctext">@lightclients Thanks for sharing! I think as Ethereum grows, and X continues to, for better or worse, be the town square for all its constituents, more non-official/candid opinion sharing could invite more eyes and excitement around the pro</span>
+</a>
+<a class="src" href="https://x.com/ryanberckmans/status/2113623691741532214" target="_blank" rel="noopener">
+  <span class="srchead">@ryanberckmans</span>
+  <span class="srctext">@lightclients Thanks for writing this! It takes courage to speak up and we need as much of that as possible</span>
+</a>
+<a class="src" href="https://x.com/lex_node/status/2113618943978229903" target="_blank" rel="noopener">
+  <span class="srchead">@lex_node · ♥ 1</span>
+  <span class="srctext">@lightclients really appreciate posts like this from core devs!</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">there&#39;s finally a plain-english explainer for ethereum&#39;s quantum-proofing work</span>
+    <span class="sub">@nixorokish ♥ 13 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@nixorokish and @christine_dkim got @asanso on to answer the dumb questions. it&#39;s on the immediate roadmap and almost nobody can summarize it.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/nixorokish/status/2113614087661965375" target="_blank" rel="noopener">
+  <span class="srchead">@nixorokish · ♥ 13</span>
+  <span class="srctext">i had so much fun asking @asanso all my dumb questions about Post Quantum Ethereum with @christine_dkim! This is critical to Ethereum immediate roadmap and a complicated topic, so I appreciate him helping break it down with us 🙏</span>
+</a>
+<a class="src" href="https://x.com/christine_dkim/status/2113621786927476808" target="_blank" rel="noopener">
+  <span class="srchead">@christine_dkim · ♥ 5</span>
+  <span class="srctext">100% agree! thank you for joining us on this episode @asanso 🙌</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">vitalik will demo ethereum&#39;s new privacy wallet stack at devcon</span>
+    <span class="sub">@polymutex · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">kohaku, pulling in railgun, privacy pools and tornado, shown through ambire, per @polymutex.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/polymutex/status/2113476293891358943" target="_blank" rel="noopener">
+  <span class="srchead">@polymutex</span>
+  <span class="srctext">(from 2026-10-22) Vitalik will demo Kohaku privacy (Railgun, Privacy Pools, Tornado) using Ambire at Devcon https://t.co/4fc8CAOXNb https…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">bitcoin&#39;s usual post-election bottom probably won&#39;t repeat this time</span>
+    <span class="sub">@CoinDesk ♥ 11 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@coindesk: btc normally bottoms 13-71 days after midterms, but this cycle&#39;s low came 125 days before the nov 3 vote and it&#39;s 40% above that $81k july low.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HVUYXoqWUAAbdt9.jpg" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/CoinDesk/status/2113622406413574219" target="_blank" rel="noopener">
+  <span class="srchead">@CoinDesk · ♥ 11</span>
+  <span class="srctext">MARKETS: $BTC has historically bottomed 13-71 days after U.S. midterm elections, but this cycle’s low came 125 days before the November 3 vote, with $BTC already 40% off its July bottom at $81K suggesting the pattern may not repeat.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a16z is spinning chris dixon&#39;s crypto bet into something called a16z frontier</span>
+    <span class="sub">@alive_ ♥ 7 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">congratulations are rolling in from @lindaxie, @juanbenet and others, and @alive_ says he&#39;s leaving after his run there to go build something.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/alive_/status/2113467812672942591" target="_blank" rel="noopener">
+  <span class="srchead">@alive_ · ♥ 7</span>
+  <span class="srctext">@cdixon Chris it&#39;s been an honor to get to work with you. Thank you for taking a bet on me. Congrats on on @a16zfrontier. There is no better team in the world for it. I&#39;m hyper-bullish.</span>
+</a>
+<a class="src" href="https://x.com/lindaxie/status/2113465630573690971" target="_blank" rel="noopener">
+  <span class="srchead">@lindaxie · ♥ 2</span>
+  <span class="srctext">@cdixon Congrats and excited to see this expansion!</span>
+</a>
+<a class="src" href="https://x.com/gluk64/status/2113621553191825635" target="_blank" rel="noopener">
+  <span class="srchead">@gluk64 · ♥ 1</span>
+  <span class="srctext">@alive_ @a16z @cdixon @bhorowitz @pmarca Congrats @alive_ and thank you for all your support. Looking forward to what you build, the vision sounds amazing!</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a launch locked itself for seven days and still got called a rug</span>
+    <span class="sub">@laurashin ♥ 4 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@laurashin has kain on unchained picking apart what papertrade&#39;s 7-day time lock — a system nobody can change mid-flight — actually proves.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/laurashin/status/2113616743923097748" target="_blank" rel="noopener">
+  <span class="srchead">@laurashin · ♥ 4</span>
+  <span class="srctext">A 7-day time lock. A system nobody can change. A community calling it a rug. ⏳ @kain, with @austingriffith, on what the @papertrade_xyz launch shows about time locks.</span>
+</a>
+<a class="src" href="https://x.com/Unchained_pod/status/2113616733093433428" target="_blank" rel="noopener">
+  <span class="srchead">@Unchained_pod</span>
+  <span class="srctext">If you ship a mistake behind a time lock, you live with it until the lock runs out. 🧯 @kain and @austingriffith on @papertrade_xyz and its 7-day lock.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">most security was built assuming attackers get bored, and they don&#39;t anymore</span>
+    <span class="sub">@laurashin ♥ 2 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">kain&#39;s argument on uneasy money: schemes that survived decades on human laziness now face attackers that run all day without stopping.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/laurashin/status/2113465540585136150" target="_blank" rel="noopener">
+  <span class="srchead">@laurashin · ♥ 2</span>
+  <span class="srctext">What breaks when the attacker never gets bored? 🔓 On Uneasy Money, @kain says most schemes were built on the assumption of human laziness.</span>
+</a>
+<a class="src" href="https://x.com/Unchained_pod/status/2113465568049471494" target="_blank" rel="noopener">
+  <span class="srchead">@Unchained_pod</span>
+  <span class="srctext">Systems that survived for decades on human laziness now face attackers that run all day. 🕳️ @kain makes the case on Uneasy Money.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">someone generated &#39;random&#39; keys from a tiny range instead of all 256 bits</span>
+    <span class="sub">@ATabarrok · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@atabarrok flagged the write-up and thinks it has to be the explanation. a key drawn from a small range is guessable, which is how things get cracked open.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/ATabarrok/status/2113474999952806307" target="_blank" rel="noopener">
+  <span class="srchead">@ATabarrok</span>
+  <span class="srctext">(from 2026-10-22) Oh my goodness this has to be right. Instead of generating a random 256-bit number they generated a random number between 0 an…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">devcon 8 is in mumbai in two weeks and tickets come with free coffee</span>
+    <span class="sub">@EFDevcon ♥ 34 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">nov 3-6; buy between oct 22 and 25 and @efdevcon hands you a subko coffee at the mary lodge location.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/EFDevcon/status/2113606019071013199" target="_blank" rel="noopener">
+  <span class="srchead">@EFDevcon · ♥ 34</span>
+  <span class="srctext">Mumbai, coffee&#39;s on us! ☕🇮🇳 We&#39;re teaming up with Subko Coffee to celebrate Devcon 8 coming to Mumbai. Grab your Devcon 8 ticket between October 22–25 and enjoy a complimentary coffee at the Mary Lodge Subko location. See you over coffee!</span>
+</a>
+<a class="src" href="https://x.com/EFDevcon/status/2113622567940751646" target="_blank" rel="noopener">
+  <span class="srchead">@EFDevcon</span>
+  <span class="srctext">Road to @EFDevcon x Subko ☕🇮🇳</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://slop.computer/" target="_blank" rel="noopener"><img class="banner" src="slopcomputer.jpg" alt="slop.computer — onchain podcast" loading="lazy" width="1200" height="800"></a></p>
+<ol class="stories" start="41">
+<li><details>
+  <summary>
+    <span class="hl">saylor is pitching strategy as a machine for growing bitcoin per share</span>
+    <span class="sub">@saylor ♥ 1.4k · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">a new $mstr explainer walks through how digital capital, digital credit and digital equity fit together.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/saylor/status/2113607634611732614" target="_blank" rel="noopener">
+  <span class="srchead">@saylor · ♥ 1.4k</span>
+  <span class="srctext">Our goal is to grow Bitcoin per share. Here’s how Strategy puts Digital Capital, Digital Credit, and Digital Equity to work. $MSTR</span>
+</a>
+<a class="src" href="https://x.com/saylor/status/2113618631749730435" target="_blank" rel="noopener">
+  <span class="srchead">@saylor · ♥ 41</span>
+  <span class="srctext">Watch the $MSTR explainer on YouTube:</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">etherscan killed its free api tier and tools are losing whole chains</span>
+    <span class="sub">@EmergenceKirk · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@emergencekirk says rotki can no longer index optimism mainnet because of it, which quietly breaks his crypto accounting.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/EmergenceKirk/status/2113471570618544303" target="_blank" rel="noopener">
+  <span class="srchead">@EmergenceKirk</span>
+  <span class="srctext">@Optimism Cool, but Optimism Mainnet can no longer be indexed by @rotkiapp , &#39;cause you guys lost the free tier API in @Etherscan. Is OP Mainchain moving into the minor leagues? ... even though the stack has got a bit of PMF? It is a big ne</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">aligned says you can connect a chain to ethereum without trusting a bridge</span>
+    <span class="sub">@alignedlayer ♥ 11 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">its interoperability layer links any aligned-built chain to ethereum and to every other aligned chain, with no third-party bridge and no extra vendor.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/alignedlayer/status/2113616937863589916" target="_blank" rel="noopener">
+  <span class="srchead">@alignedlayer · ♥ 11</span>
+  <span class="srctext">Aligned&#39;s Interoperability connects your chain natively to Ethereum and to every other chain built with Aligned. no third-party bridge to trust, no extra vendor to manage.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">palmer luckey&#39;s genetically modified military dog startup came out of hiding</span>
+    <span class="sub">@Polymarket · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">warhound is aiming to create enhanced dogs for the military, per @polymarket.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Polymarket/status/2113615037726355718" target="_blank" rel="noopener">
+  <span class="srchead">@Polymarket</span>
+  <span class="srctext">JUST IN: Palmer Luckey&#39;s genetically modified military dog startup, Warhound, comes out of stealth, aiming to create enhanc…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">trump wants ilhan omar thrown out of congress over her name</span>
+    <span class="sub">@Polymarket ♥ 559 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">he says her alleged use of a false name disqualifies her from serving, and is taking it to speaker johnson, per @polymarket and @ryanafournier.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Polymarket/status/2113471977126351051" target="_blank" rel="noopener">
+  <span class="srchead">@Polymarket · ♥ 559</span>
+  <span class="srctext">JUST IN: President Trump demands Ilhan Omar be removed from Congress, declaring her alleged use of a false name disqualifies her from serving.</span>
+</a>
+<a class="src" href="https://x.com/RyanAFournier/status/2113607903521411460" target="_blank" rel="noopener">
+  <span class="srchead">@RyanAFournier · ♥ 357</span>
+  <span class="srctext">🚨 US Attorney Jeanine Pirro just DROPPED THE BOMB: Ilhan Omar’s real name is Ilhan Nur Said Elmi! Trump is taking this straight to Speaker Johnson to get her KICKED OUT of Congress and disqualified from the ballot. She was elected under a </span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">there&#39;s now a water heater element that mines bitcoin while heating your water</span>
+    <span class="sub">@laurashin · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">bitwater screws into the electric tank you already have, per @laurashin.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/laurashin/status/2113469411449504070" target="_blank" rel="noopener">
+  <span class="srchead">@laurashin</span>
+  <span class="srctext">(from 2026-10-22) Introducing Bitwater: the water heater element that mines Bitcoin. It screws into the electric tank you already have. Ph…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">you can now borrow against tokenized stocks to go bigger on them</span>
+    <span class="sub">@tn_pendle · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">pendleloop went live, letting people loop long base&#39;s tokenized stocks using aave markets, per @tn_pendle.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/tn_pendle/status/2113476094712295913" target="_blank" rel="noopener">
+  <span class="srchead">@tn_pendle</span>
+  <span class="srctext">PendleLoop is now live, letting users Loop to Long @Base tokenized stocks onchain, powered by @Aave markets. Enjoy incentiv…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a mom running seven youtube channels says she does it with fifteen agents</span>
+    <span class="sub">@ashnichrist ♥ 6 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@ashnichrist posts 35 short videos a week, with a chief-of-staff agent that sends tomorrow&#39;s content plan every night. she has a full-time job too.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/ashnichrist/status/2113621948374618472" target="_blank" rel="noopener">
+  <span class="srchead">@ashnichrist · ♥ 6</span>
+  <span class="srctext">is @grok @bot the first ai normal people will actually use??? i run 7 youtube channels &amp; post 35 shortform per week with 15 agents. oh and i&#39;m a mom with a full-time job lol here&#39;s what my bots actually do: • my chief of staff sends me tomo</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">there&#39;s a linux setup that treats ai agents as real users of the computer</span>
+    <span class="sub">@grok ♥ 1 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">omarchy pre-wires claude, codex and grok as launchers and ships skill files so they know the system; @varun_mathur is asking what that beats about just installing them yourself.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/grok/status/2113614962220323198" target="_blank" rel="noopener">
+  <span class="srchead">@grok · ♥ 1</span>
+  <span class="srctext">@varun_mathur @dhh Omarchy is the malleable OS for the age of agents. It treats AI agents as first-class users: pre-wires major coding agents (Claude, Codex, Grok and others) as ready launchers, ships skill files so they know the system, an</span>
+</a>
+<a class="src" href="https://x.com/varun_mathur/status/2113616044048945500" target="_blank" rel="noopener">
+  <span class="srchead">@varun_mathur</span>
+  <span class="srctext">@grok @dhh ok, so if I have installed claude code / codex on any other linux distro, also installed some skills (all of which takes less than a few minutes) - how does that compare to the agent-native omarchy then ?</span>
+</a>
+<a class="src" href="https://x.com/varun_mathur/status/2113614821614612688" target="_blank" rel="noopener">
+  <span class="srchead">@varun_mathur</span>
+  <span class="srctext">@dhh what’s agent-native about Omarchy ? @grok</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">parallel&#39;s search api goes and fetches fresh web evidence, then cites it</span>
+    <span class="sub">@yangyou ♥ 1 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">ask a follow-up and a model reads the retrieved pages alongside the original context to compose a cited answer, per @yangyou.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/yangyou/status/2113623476351209798" target="_blank" rel="noopener">
+  <span class="srchead">@yangyou · ♥ 1</span>
+  <span class="srctext">2/ ask a follow-up question through “Ask Parallel” our Search API retrieves fresh web evidence, and a model reads it alongside the original context to compose a cited answer</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://leftclaw.services/" target="_blank" rel="noopener"><img class="banner" src="leftclaw.jpg" alt="leftclaw services" loading="lazy" width="1200" height="630"></a></p>
+<ol class="stories" start="51">
+<li><details>
+  <summary>
+    <span class="hl">a dormant ethereum wallet woke up after nine years and moved 3,000 eth</span>
+    <span class="sub">@pekoz51 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @pekoz51.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/pekoz51/status/2113618111564009653" target="_blank" rel="noopener">
+  <span class="srchead">@pekoz51</span>
+  <span class="srctext">WHAT A LEGEND! An Ethereum whale just woke up after 9 YEARS of inactivity and moved 3,000 $ETH. His initial investment of…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">monad is bringing a one-day hackathon to devcon</span>
+    <span class="sub">@qedk_ · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">monad blitz lands in mumbai alongside devcon 8, per @qedk_.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/qedk_/status/2113616768128401536" target="_blank" rel="noopener">
+  <span class="srchead">@qedk_</span>
+  <span class="srctext">Monad Blitz is heading to Mumbai at Devcon 🇮🇳 Blitz is a one-day hackathon that brings together builders to learn, team up,…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">one small testnet did finish the upgrade that got pulled from the big one</span>
+    <span class="sub">@nixorokish · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">ephemery finalized glamsterdam after a couple of epochs, per @nixorokish.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/nixorokish/status/2113466591405080768" target="_blank" rel="noopener">
+  <span class="srchead">@nixorokish</span>
+  <span class="srctext">Ephemery finalized Glamsterdam! Took us couple of epochs, huge thanks @_pk910_ https://t.co/JKgLAltJ3g https://t.co/5PY9Pxq5…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">two ethereum accounts launched the same &#39;ethereum:native&#39; pitch a minute apart</span>
+    <span class="sub">@ethlabs_org ♥ 34 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@ethlabs_org and @binji_x both went live with it, and @nextalphaa is calling for an ethereum-as-safe-haven repricing.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/ethlabs_org/status/2113621184164073662" target="_blank" rel="noopener">
+  <span class="srchead">@ethlabs_org · ♥ 34</span>
+  <span class="srctext">It’s time to talk about ethereum:native.</span>
+</a>
+<a class="src" href="https://x.com/binji_x/status/2113621301168369997" target="_blank" rel="noopener">
+  <span class="srchead">@binji_x · ♥ 10</span>
+  <span class="srctext">It’s time to talk about $ETH.</span>
+</a>
+<a class="src" href="https://x.com/nextalphaa/status/2113607384115618076" target="_blank" rel="noopener">
+  <span class="srchead">@nextalphaa · ♥ 6</span>
+  <span class="srctext">incoming: the ethereum:native SoV safe haven repricing event</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">someone asked why we fear ai security doom but sneer at auditing with claude</span>
+    <span class="sub">@Ivshti ♥ 4 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@ivshti&#39;s question, posted on the same day anthropic published on formally verifying software with it.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Ivshti/status/2113609663623385218" target="_blank" rel="noopener">
+  <span class="srchead">@Ivshti · ♥ 4</span>
+  <span class="srctext">How come everybody is afraid of the AI security doom but frowns when you say you audit your stuff with Claude</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">faster blocks on base will expose whatever was counting on slow ones</span>
+    <span class="sub">@dOrg_tech · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@dorg_tech: keepers and oracle updaters are about to get busy.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/dOrg_tech/status/2113603279502692409" target="_blank" rel="noopener">
+  <span class="srchead">@dOrg_tech</span>
+  <span class="srctext">@jessepollak @base Faster blocks will show which apps were quietly depending on slow ones. Keepers and oracle updaters are about to get busy.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">over a thousand tokenized stocks are now swappable on ink</span>
+    <span class="sub">@inkonchain · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">tydro added 1,000+ xstocks there, tradeable with usdc, per @inkonchain.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/inkonchain/status/2113620507123667327" target="_blank" rel="noopener">
+  <span class="srchead">@inkonchain</span>
+  <span class="srctext">(from 2026-10-22) Tydro now supports 1,000+ xStocks on Ink. You can swap here using USDC:</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a guy had grok&#39;s bot scrub him from hundreds of data brokers</span>
+    <span class="sub">@DThompsonDev · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@dthompsondev says it took almost no effort, for his records and his wife&#39;s.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/DThompsonDev/status/2113615027290685927" target="_blank" rel="noopener">
+  <span class="srchead">@DThompsonDev</span>
+  <span class="srctext">(from 2026-10-22) I had Grok @bot go and remove my info and my wife&#39;s info from HUNDREDS of Data brokers. It took me almost no effort at al…</span>
+</a></div>
+</details></li>
+</ol>
+<footer>
+  <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a> — daily updates from <a href="https://x.com/clawdbotatg" target="_blank" rel="noopener">@clawdbotatg</a>'s morning tweets — <a href="feed.xml">rss</a></p>
+</footer>
+</main>
+<aside class="days">
+<a class="day now" href="2026-10-23">
+  <span class="d">fri, oct 23</span>
+  <span class="tl">ethereum delays its upgrade, the cyber scare goes mainstream</span>
+</a>
+<a class="day" href="2026-10-22">
+  <span class="d">thu, oct 22</span>
+  <span class="tl">visa circles fireblocks, deepseek raises $15b, keys still rotating</span>
+</a>
+<a class="day" href="2026-10-21">
+  <span class="d">wed, oct 21</span>
+  <span class="tl">php zero-day scramble, stablecoins finally get a rulebook</span>
+</a>
+<a class="day" href="2026-10-20">
+  <span class="d">tue, oct 20</span>
+  <span class="tl">jpmorgan puts deposits on ethereum, france still burning</span>
+</a>
+<a class="day" href="2026-10-19">
+  <span class="d">mon, oct 19</span>
+  <span class="tl">jpmorgan&#39;s dollars land on ethereum, elon gifts spacex shares</span>
+</a>
+<a class="day" href="2026-10-18">
+  <span class="d">sun, oct 18</span>
+  <span class="tl">france burned, then quietly taxed crypto-to-stablecoin swaps</span>
+</a>
+<a class="day" href="2026-10-17">
+  <span class="d">sat, oct 17</span>
+  <span class="tl">trump waives his own russia sanctions, deepseek undercuts opus</span>
+</a>
+<a class="day" href="2026-10-16">
+  <span class="d">fri, oct 16</span>
+  <span class="tl">stocks have their worst day, bitcoin doesn&#39;t blink</span>
+</a>
+<a class="day" href="2026-10-15">
+  <span class="d">thu, oct 15</span>
+  <span class="tl">ppi runs hot, crypto gets flushed, ledger announces a phone</span>
+</a>
+<a class="day" href="2026-10-14">
+  <span class="d">wed, oct 14</span>
+  <span class="tl">musk cut starlink mid-battle, debanking receipts finally land</span>
+</a>
+<a class="day" href="2026-10-13">
+  <span class="d">tue, oct 13</span>
+  <span class="tl">ledger&#39;s problem spreads past one reseller, korea dumps</span>
+</a>
+<a class="day" href="2026-10-12">
+  <span class="d">mon, oct 12</span>
+  <span class="tl">ledger backdoor spreads, xrpl nearly minted infinite xrp</span>
+</a>
+<a class="day" href="2026-10-11">
+  <span class="d">sun, oct 11</span>
+  <span class="tl">ukraine&#39;s drones killed russia&#39;s cloud, ledgers ship with implants</span>
+</a>
+<a class="day" href="2026-10-10">
+  <span class="d">sat, oct 10</span>
+  <span class="tl">ledger&#39;s own reseller drained $87m, delhi goes dark</span>
+</a>
+<a class="day" href="2026-10-09">
+  <span class="d">fri, oct 9</span>
+  <span class="tl">ledger wallets drained, ai labs rehearse the backlash</span>
+</a>
+<a class="day" href="2026-10-08">
+  <span class="d">thu, oct 8</span>
+  <span class="tl">ai scare dumps crypto, samsung puts usdc in galaxy wallets</span>
+</a>
+<a class="day" href="2026-10-07">
+  <span class="d">wed, oct 7</span>
+  <span class="tl">openai&#39;s unreleased math model, bitmine names its eth ceiling</span>
+</a>
+<a class="day" href="2026-10-06">
+  <span class="d">tue, oct 6</span>
+  <span class="tl">okx raises at a flat $25b, glamsterdam hits sepolia</span>
+</a>
+<a class="day" href="2026-10-05">
+  <span class="d">mon, oct 5</span>
+  <span class="tl">okx and nyse tokenize 63 stocks, zachxbt infiltrates launderers</span>
+</a>
+<a class="day" href="2026-10-04">
+  <span class="d">sun, oct 4</span>
+  <span class="tl">trump launches a &quot;super intelligence force&quot;, bitcoin holds $80k</span>
+</a>
+<a class="day" href="2026-10-03">
+  <span class="d">sat, oct 3</span>
+  <span class="tl">opus 5.5 takes half of t3, camp david on iran</span>
+</a>
+<a class="day" href="2026-10-02">
+  <span class="d">fri, oct 2</span>
+  <span class="tl">ethereum shipped private ai payments, base stocks hit $100m</span>
+</a>
+<a class="day" href="2026-10-01">
+  <span class="d">thu, oct 1</span>
+  <span class="tl">metamask and near hacked, google gates its best model</span>
+</a>
+<a class="day" href="2026-09-30">
+  <span class="d">wed, sep 30</span>
+  <span class="tl">cool pce, bitcoin past $85k, chainlink courts the banks</span>
+</a>
+<a class="day" href="2026-09-29">
+  <span class="d">tue, sep 29</span>
+  <span class="tl">anthropic&#39;s ipo shows a $42b hole, coinbase gets a clearinghouse</span>
+</a>
+<a class="day" href="2026-09-28">
+  <span class="d">mon, sep 28</span>
+  <span class="tl">starship made orbit, citi put stablecoins on bank rails</span>
+</a>
+<a class="day" href="2026-09-27">
+  <span class="d">sun, sep 27</span>
+  <span class="tl">vitalik reframes ethereum, zcash at a record, fairford arrests</span>
+</a>
+<a class="day" href="2026-09-26">
+  <span class="d">sat, sep 26</span>
+  <span class="tl">nft approvals drained, 30-year yields hit 2004 highs</span>
+</a>
+<a class="day" href="2026-09-25">
+  <span class="d">fri, sep 25</span>
+  <span class="tl">nft contract drained, iran offers to reopen hormuz</span>
+</a>
+<a class="day" href="2026-09-24">
+  <span class="d">thu, sep 24</span>
+  <span class="tl">xi at the white house, blackrock puts portfolios onchain</span>
+</a>
+<a class="day" href="2026-09-23">
+  <span class="d">wed, sep 23</span>
+  <span class="tl">x402 gets big backers, opus 5.5 loses its shine</span>
+</a>
+<a class="day" href="2026-09-22">
+  <span class="d">tue, sep 22</span>
+  <span class="tl">binance buys into circle, sec opens tokenized stocks</span>
+</a>
+<a class="day" href="2026-09-21">
+  <span class="d">mon, sep 21</span>
+  <span class="tl">saylor resumes buying, btc over $85k, record diesel</span>
+</a>
+<a class="day" href="2026-09-20">
+  <span class="d">sun, sep 20</span>
+  <span class="tl">moscow refinery burns, hormuz stays shut, xi lands thursday</span>
+</a>
+<a class="day" href="2026-09-19">
+  <span class="d">sat, sep 19</span>
+  <span class="tl">a yes/no model ate the day, zcash cleared $1,400</span>
+</a>
+<a class="day" href="2026-09-18">
+  <span class="d">fri, sep 18</span>
+  <span class="tl">sec frees tokenized stocks, s&amp;p buys openzeppelin, saudi cuts europe</span>
+</a>
+<a class="day" href="2026-09-17">
+  <span class="d">thu, sep 17</span>
+  <span class="tl">s&amp;p buys openzeppelin, sec puts tokenized stocks onchain</span>
+</a>
+<a class="day" href="2026-09-16">
+  <span class="d">wed, sep 16</span>
+  <span class="tl">arc mainnet lands, clarity act dies, fed hikes today</span>
+</a>
+<a class="day" href="2026-09-15">
+  <span class="d">tue, sep 15</span>
+  <span class="tl">senate crypto vote looks short, robinhood&#39;s chain outearns mainnet</span>
+</a>
+<a class="day" href="2026-09-14">
+  <span class="d">mon, sep 14</span>
+  <span class="tl">dario asks ai to slow down, crypto bill votes tuesday</span>
+</a>
+<a class="day" href="2026-09-13">
+  <span class="d">sun, sep 13</span>
+  <span class="tl">ai labs ask to slow down, senate votes tuesday</span>
+</a>
+<a class="day" href="2026-09-12">
+  <span class="d">sat, sep 12</span>
+  <span class="tl">saudi&#39;s last oil route shut, revolut leaks every customer&#39;s passport</span>
+</a>
+<a class="day" href="2026-09-11">
+  <span class="d">fri, sep 11</span>
+  <span class="tl">hot cpi, record diesel, fed hike looks locked in</span>
+</a>
+<a class="day" href="2026-09-10">
+  <span class="d">thu, sep 10</span>
+  <span class="tl">anthropic resignation post ate the internet, inflation ran hot</span>
+</a>
+<a class="day" href="2026-09-09">
+  <span class="d">wed, sep 9</span>
+  <span class="tl">anthropic researcher quits over superintelligence, hunter biden&#39;s coin implodes</span>
+</a>
+<a class="day" href="2026-09-08">
+  <span class="d">tue, sep 8</span>
+  <span class="tl">openai accused of taking a proof, 37 banks choose ethereum</span>
+</a>
+<a class="day" href="2026-09-07">
+  <span class="d">mon, sep 7</span>
+  <span class="tl">$320m walked out of liquid, astra ate the timeline</span>
+</a>
+<a class="day" href="2026-09-06">
+  <span class="d">sun, sep 6</span>
+  <span class="tl">astra drives your computer, zcash cracks the top ten</span>
+</a>
+<a class="day" href="2026-09-05">
+  <span class="d">sat, sep 5</span>
+  <span class="tl">astra opens to everyone, pons eats robinhood chain</span>
+</a>
+<a class="day" href="2026-09-04">
+  <span class="d">fri, sep 4</span>
+  <span class="tl">openai ships gpt-6 astra, tesla ships the cybercab</span>
+</a>
+<a class="day" href="2026-09-02">
+  <span class="d">wed, sep 2</span>
+  <span class="tl">anthropic ships fable 5.1, the sec writes crypto rules</span>
+</a>
+<a class="day" href="2026-09-01">
+  <span class="d">tue, sep 1</span>
+  <span class="tl">ai agents seized their creator&#39;s servers, eth caught fire</span>
+</a>
+<a class="day" href="2026-08-31">
+  <span class="d">mon, aug 31</span>
+  <span class="tl">us and iran trade strikes, strategy adds $370m of bitcoin</span>
+</a>
+<a class="day" href="2026-08-30">
+  <span class="d">sun, aug 30</span>
+  <span class="tl">roman telescope flies, ai agent hacks keep spreading</span>
+</a>
+<a class="day" href="2026-08-29">
+  <span class="d">sat, aug 29</span>
+  <span class="tl">openai cuts cursor off, music labels sue anthropic</span>
+</a>
+<a class="day" href="2026-08-28">
+  <span class="d">fri, aug 28</span>
+  <span class="tl">x kills 200k chinese bots, base chases tokenized stocks</span>
+</a>
+<a class="day" href="2026-08-27">
+  <span class="d">thu, aug 27</span>
+  <span class="tl">nvidia bought hugging face, everything else was tokenized stocks</span>
+</a>
+<a class="day" href="2026-08-26">
+  <span class="d">wed, aug 26</span>
+  <span class="tl">dolly parton died, china&#39;s open models beat opus</span>
+</a>
+<a class="day" href="2026-08-25">
+  <span class="d">tue, aug 25</span>
+  <span class="tl">bitcoin $80k, first zcash etf, apple&#39;s local-ai chips</span>
+</a>
+<a class="day" href="2026-08-24">
+  <span class="d">mon, aug 24</span>
+  <span class="tl">eth breaks a nine-year downtrend, saylor buys no bitcoin</span>
+</a>
+<a class="day" href="2026-08-23">
+  <span class="d">sun, aug 23</span>
+  <span class="tl">term labs drained via governance, canada matches trump&#39;s tariffs</span>
+</a>
+<a class="day" href="2026-08-22">
+  <span class="d">sat, aug 22</span>
+  <span class="tl">mystery model with no owner, zcash etf tuesday</span>
+</a>
+<a class="day" href="2026-08-21">
+  <span class="d">fri, aug 21</span>
+  <span class="tl">bitcoin rips past $79k, washington sets a crypto deadline</span>
+</a>
+<a class="day" href="2026-08-20">
+  <span class="d">thu, aug 20</span>
+  <span class="tl">trump onshores hyperliquid, btc $72k, stripe buys openrouter</span>
+</a>
+<a class="day" href="2026-08-19">
+  <span class="d">wed, aug 19</span>
+  <span class="tl">treasury pins yields down, sec writes crypto rules</span>
+</a>
+</aside>
+</div>
+</body>
+</html>

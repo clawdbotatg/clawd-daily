@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gmsers · 2026-10-29</title>
+<meta name="description" content="someone stole $5.57 billion from binance, the biggest crypto hack ever">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="alternate" type="application/rss+xml" title="gmsers" href="https://gmsers.com/feed.xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:site_name" content="gmsers">
+<meta property="og:url" content="https://gmsers.com/2026-10-29">
+<meta property="og:title" content="gmsers · Thursday, October 29, 2026">
+<meta property="og:description" content="someone stole $5.57 billion from binance, the biggest crypto hack ever">
+<meta property="og:image" content="https://gmsers.com/og/2026-10-29.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gmsers.com/og/2026-10-29.png">
+<style>
+  /* gmsers is dark, always: black page, white text, lobster-red links */
+  :root { --paper:#000; --ink:#f4f4f2; --muted:#9a9ea6; --faint:#242629; --accent:#ff4b33; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--paper); color:var(--ink); max-width:1240px; margin:0 auto; padding:22px 18px 60px;
+         font:18px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  /* main list + right rail of days; rail stacks below on phones */
+  .wrap { display:flex; gap:44px; align-items:flex-start; margin-top:16px; }
+  .wrap main { flex:1; min-width:0; }
+  aside.days { width:270px; flex:none; position:sticky; top:18px; max-height:calc(100vh - 36px);
+               overflow:auto; scrollbar-width:none; }
+  aside.days::-webkit-scrollbar { display:none; }
+  a.day { display:block; padding:9px 0; border-bottom:1px solid var(--faint); text-decoration:none; }
+  a.day .d { display:block; color:var(--ink); font-weight:700; font-size:.85rem; }
+  a.day.now .d { color:var(--accent); }
+  a.day .tl { display:block; color:var(--muted); font-size:.8rem; line-height:1.35; margin-top:1px; }
+  a.day:hover .d { color:var(--accent); }
+  @media (max-width:900px) {
+    .wrap { display:block; }
+    aside.days { width:auto; position:static; max-height:none; margin-top:30px;
+                 border-top:2px solid var(--ink); padding-top:8px; }
+  }
+  .masthead { position:relative; padding-bottom:10px; border-bottom:2px solid var(--ink); }
+  .mrow { display:flex; align-items:flex-end; gap:16px; flex-wrap:wrap; }
+  .masthead h1 { font-size:2.4rem; font-weight:800; letter-spacing:-.02em; line-height:1; }
+  .masthead h1 a { color:var(--ink); text-decoration:none; }
+  .masthead h1 .gm { color:var(--accent); }
+  .masthead h1 .dotcom { color:var(--muted); }
+  .pfp { width:64px; height:64px; border-radius:12px; flex:none; }
+  .dateline { position:absolute; top:0; right:0; color:var(--muted); font-size:.8rem; text-align:right; }
+  ol.stories { margin-top:16px; padding-left:2em; }
+  ol.stories li { padding:7px 0; }
+  ol.stories li::marker { color:var(--muted); font-size:.85rem; }
+  summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none; }
+  summary::-webkit-details-marker { display:none; }
+  .hl { font-size:1.2rem; font-weight:600; letter-spacing:-.01em; line-height:1.3; }
+  .sub { display:block; color:var(--muted); font-size:.78rem; margin-top:2px; }
+  .sub .more { color:var(--accent); }
+  details[open] .sub .more { opacity:.5; }
+  .dek { font-size:1rem; line-height:1.5; margin:7px 0 2px; max-width:46em; }
+  .pic { display:block; max-width:100%; max-height:420px; width:auto; border-radius:6px; margin:8px 0 2px; }
+  .srcs { margin:6px 0 4px; }
+  a.src { display:block; text-decoration:none; color:var(--ink); border-left:2px solid var(--faint);
+          padding:5px 10px; margin-top:6px; font-size:.84rem; }
+  a.src:hover { border-left-color:var(--accent); }
+  .srchead { display:block; font-size:.74rem; font-weight:600; color:var(--accent); margin-bottom:1px; }
+  .srctext { color:var(--ink); opacity:.85; }
+  footer { margin-top:32px; color:var(--muted); font-size:.78rem; }
+  footer a { color:var(--accent); }
+  .powered { margin-top:14px; }
+  .powered a { color:var(--accent); text-decoration:none; }
+  .ad { margin:26px 0; }
+  .show { margin:0 0 22px; }
+  .show .twitter-tweet { margin:0 auto !important; }
+  .show video { display:block; width:100%; max-width:560px; margin:0 auto; border-radius:12px; background:#000; }
+  .ad .banner { display:block; width:100%; height:auto; border-radius:12px; }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="mrow">
+    <img class="pfp" src="gmsers.jpg" alt="gmsers" width="64" height="64">
+    <h1><a href="index.html"><span class="gm">gm</span>sers<span class="dotcom">.com</span></a></h1>
+    <div class="dateline">Thursday, October 29, 2026 · no. 71</div>
+  </div>
+</header>
+<div class="wrap">
+<main>
+<!-- edition:2026-10-29 -->
+<ol class="stories" start="1">
+<li><details>
+  <summary>
+    <span class="hl">someone stole $5.57 billion from binance, the biggest crypto hack ever</span>
+    <span class="sub">@0xQuit ♥ 374 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @0xQuit&#39;s tally: ~$3.51b in eth, ~$1.44b in bitcoin and ~$630m on tron, pulled out of the exchange&#39;s hot wallets in one afternoon.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/0xQuit/status/2115938349085327480" target="_blank" rel="noopener">
+  <span class="srchead">@0xQuit · ♥ 374</span>
+  <span class="srctext">ok so looks like the largest crypto hack of all time, here&#39;s where we&#39;re at: Stolen: • ~$5.57B across Ethereum, Bitcoin, and Tron: ~$3.51B ETH, ~$1.44B BTC, ~$630M Tron. Frozen: • ~$2.39B in stablecoins: ~$1.567B USDT, ~$823M USDC • Aave fr</span>
+</a>
+<a class="src" href="https://x.com/fwvc_/status/2115935469062213783" target="_blank" rel="noopener">
+  <span class="srchead">@fwvc_</span>
+  <span class="srctext">BREAKING: Binance has been hacked with wallets across the Ethereum, Bitcoin, and TRON networks seeing outflows of -$5.7…</span>
+</a>
+<a class="src" href="https://x.com/notsofast/status/2115935509533122991" target="_blank" rel="noopener">
+  <span class="srchead">@notsofast</span>
+  <span class="srctext">BREAKING: World&#39;s largest crypto exchange Binance hacked with over $5.6 billion stolen: • $1.45 billion $BTC • $875 mill…</span>
+</a>
+<a class="src" href="https://x.com/seandotio/status/2115935787137335329" target="_blank" rel="noopener">
+  <span class="srchead">@seandotio</span>
+  <span class="srctext">UPDATE: TOTAL BINANCE EXPLOIT TOTALS OVER $5.5B. $2.29B in USDT (frozen), and $823M USDC (frozen). 18,270 BTC ($1.45B), 197K…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">cz says binance will cover the whole loss out of its own pocket</span>
+    <span class="sub">@cz_binance ♥ 6.1k · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">his words: the loss &quot;might be a bit higher than that, but will cover.&quot; cointelegraph had him at over $1b net before the final numbers landed.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/cz_binance/status/2115932500006756686" target="_blank" rel="noopener">
+  <span class="srchead">@cz_binance · ♥ 6.1k</span>
+  <span class="srctext">Loss might be a bit higher than that, but will cover. 🙏</span>
+</a>
+<a class="src" href="https://x.com/Cointelegraph/status/2115933559349485916" target="_blank" rel="noopener">
+  <span class="srchead">@Cointelegraph · ♥ 165</span>
+  <span class="srctext">🚨 NOW: Binance founder CZ said losses may exceed $1 billion but confirmed they will be covered.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">binance stopped letting anyone withdraw while it checks its systems</span>
+    <span class="sub">@binance ♥ 2.2k · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">the exchange says user funds remain safe and withdrawals resume once the security issue is closed out. no timeline given.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HV1Pf7ubcAApn85.jpg" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/binance/status/2115935002139742437" target="_blank" rel="noopener">
+  <span class="srchead">@binance · ♥ 2.2k</span>
+  <span class="srctext">Our team is conducting security checks. Withdrawals will resume as soon as the security issue is fully resolved. User funds remain safe. We’ll keep you updated. Thank you for your patience.</span>
+</a>
+<a class="src" href="https://x.com/_rossstephenson/status/2115944987020112311" target="_blank" rel="noopener">
+  <span class="srchead">@_rossstephenson</span>
+  <span class="srctext">User funds are safe! It does look like a hack on Binance. Appreciate the quick freeze from Tether (~$971m) and Circle (~$8…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">tether and circle froze $2.39 billion of the stolen money mid-heist</span>
+    <span class="sub">@CoinDesk ♥ 38 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per coindesk: $1.567b of usdt frozen by paolo ardoino, $800m+ of usdc by jeremy allaire, plus a chunk from world liberty financial.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/CoinDesk/status/2115940375852671395" target="_blank" rel="noopener">
+  <span class="srchead">@CoinDesk · ♥ 38</span>
+  <span class="srctext">UPDATE: Tether, Circle and World Liberty Financial have frozen more than $2.39 billion in stablecoins linked to the suspected Binance hack. Tether CEO Paolo Ardoino confirmed $1.567 billion in USDT frozen. Circle CEO Jeremy Allaire reported</span>
+</a>
+<a class="src" href="https://x.com/DecryptMedia/status/2115934707431165988" target="_blank" rel="noopener">
+  <span class="srchead">@DecryptMedia · ♥ 9</span>
+  <span class="srctext">Tether Freezes More Than 1.5B USDT Tied to Potential Binance Hack. Tether CEO Paolo Ardoino says the company froze more than 1.567B USDT linked to the incident. The exchange says its team is running security checks and that user funds &quot;rema</span>
+</a>
+<a class="src" href="https://x.com/Dv_nmd/status/2115936510910325081" target="_blank" rel="noopener">
+  <span class="srchead">@Dv_nmd</span>
+  <span class="srctext">🚨Over $5.6B stolen from Binance, biggest hack in crypto history Seems ~2B of USDC/USDT were frozen by Tether &amp; Circle, it&#39;s hi…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">ripple froze another $200 million and binance&#39;s co-founder publicly thanked them</span>
+    <span class="sub">@Cointelegraph ♥ 352 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">yi he said the frozen funds mean user money is safu. ripple&#39;s rlusd was one of the bigger single assets taken.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Cointelegraph/status/2115932282896912891" target="_blank" rel="noopener">
+  <span class="srchead">@Cointelegraph · ♥ 352</span>
+  <span class="srctext">🚨 JUST IN: Binance co-founder Yi He thanked Ripple for promptly freezing approximately $200 million in funds, adding that user funds are SAFU.</span>
+</a>
+<a class="src" href="https://x.com/manbirmarwah/status/2115942604793868720" target="_blank" rel="noopener">
+  <span class="srchead">@manbirmarwah</span>
+  <span class="srctext">ok safe to say binance is pwned The biggest assets were approximately: • 1.615B USDT • 62.6M RLUSD • 29,934 wBETH • 11,372 XA…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">after all the freezes binance is probably only actually out about $1 billion</span>
+    <span class="sub">@ratwell · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@ratwell&#39;s math: the exchange holds $144b of customer assets, so even a $5.57b hack minus $2.39b frozen comes to roughly 0.69% of the book.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/ratwell/status/2115934714213421523" target="_blank" rel="noopener">
+  <span class="srchead">@ratwell</span>
+  <span class="srctext">Binance has 144bn of assets under custody, with USDT and USDC frozen the total loss now is around ~1bn, which is only 0.69% of…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the thieves got in through a new ethereum feature that lets wallets delegate control</span>
+    <span class="sub">@emrecolakoglu · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">about 140 eip-7702 authorizations were signed by binance addresses. not knowing the live wallet counter, the attacker sprayed 50 of them in one transaction to be sure one landed.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/emrecolakoglu/status/2115935766501052589" target="_blank" rel="noopener">
+  <span class="srchead">@emrecolakoglu</span>
+  <span class="srctext">Here is what the chain shows about the Binance hack so far. 1/ The attacker had about 140 EIP-7702 authorizations signed by Bi…</span>
+</a>
+<a class="src" href="https://x.com/NFTMerchant/status/2115933559466975624" target="_blank" rel="noopener">
+  <span class="srchead">@NFTMerchant</span>
+  <span class="srctext">The attacker didn&#39;t know Binance 14&#39;s live nonce. So they sprayed 50 EIP-7702 auths (18914775-18914824) in one type-4 tx.…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">binance&#39;s own signing keys look compromised, which is much worse than phishing</span>
+    <span class="sub">@matthew_d_green · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@matthew_d_green reads the chain as binance 16 signing with its own key. @0xQuit points out bitcoin and tron went too, which only works if the infrastructure itself is owned.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/matthew_d_green/status/2115937299129397631" target="_blank" rel="noopener">
+  <span class="srchead">@matthew_d_green</span>
+  <span class="srctext">Started with an EIP-7702 delegation, but Binance 16 signed with its own key, so their signing is compromised. Tether &amp;…</span>
+</a>
+<a class="src" href="https://x.com/0xQuit/status/2115943552027124149" target="_blank" rel="noopener">
+  <span class="srchead">@0xQuit · ♥ 7</span>
+  <span class="srctext">On further inspection this may just be laziness on the attacker&#39;s part. Since they were also able to steal Bitcoin and Tron using normal transactions, it would seem logical that they do have enough access to Binance infrastructure to steal </span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the hacker borrowed $45 million of eth from aave before anyone could freeze him</span>
+    <span class="sub">@mzeller ♥ 138 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per @mzeller he supplied 60m usdt and pulled 19,762 weth in three minutes — beating tether&#39;s freeze and aave&#39;s guardian by 46 minutes.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/mzeller/status/2115940092409770194" target="_blank" rel="noopener">
+  <span class="srchead">@mzeller · ♥ 138</span>
+  <span class="srctext">Aave protocol will be fine. The hacker supplied 60M USDT and borrowed 19,762 wETH (~44.9M$) in 3 minutes, before Tether froze their address and before the Aave Guardian froze the Aave V3 Core reserves (46 min later). But USDT is real money </span>
+</a>
+<a class="src" href="https://x.com/ShannaDaphne/status/2115943312477589515" target="_blank" rel="noopener">
+  <span class="srchead">@ShannaDaphne · ♥ 2</span>
+  <span class="srctext">Gotta give it to the Binance hacker. If he really used that stolen USDT as collateral on Aave to borrow ETH before the freeze, that’s some evil genius shit. 😭</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">aave froze its biggest lending markets as a precaution</span>
+    <span class="sub">@CamiRusso ♥ 4 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">stani kulechov insists the protocol was not affected and ltv values were cut across v3 and v4. the hacker&#39;s collateral is real dollars, so aave should come out whole.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/CamiRusso/status/2115939010254192680" target="_blank" rel="noopener">
+  <span class="srchead">@CamiRusso · ♥ 4</span>
+  <span class="srctext">@aave just froze some markets, it said as a precaution. Reports said hackers were borrowing ETH against stolen stables</span>
+</a>
+<a class="src" href="https://x.com/StaniKulechov/status/2115941970015101064" target="_blank" rel="noopener">
+  <span class="srchead">@StaniKulechov · ♥ 6</span>
+  <span class="srctext">@CamiRusso @aave Yes this is a precautionary measure, Aave Protocol was not affected</span>
+</a>
+<a class="src" href="https://x.com/samehueasyou/status/2115935730492997744" target="_blank" rel="noopener">
+  <span class="srchead">@samehueasyou</span>
+  <span class="srctext">📢Important update on Aave: The LTV values for all assets across V3 and V4 markets on Ethereum mainnet and V3 markets on Bas…</span>
+</a>
+<a class="src" href="https://x.com/RhettShipp/status/2115935328133640324" target="_blank" rel="noopener">
+  <span class="srchead">@RhettShipp</span>
+  <span class="srctext">Aave has no issue btw The hacker put in usdt and borrowed eth Eth went down and the usdt collateral is real money In the ke…</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><img class="banner" src="onedollaraudit.png" alt="one dollar audit — a serious security audit, one dollar" loading="lazy" width="1200" height="630"></a></p>
+<ol class="stories" start="11">
+<li><details>
+  <summary>
+    <span class="hl">the hacker is selling the stolen tokens live on-chain while everyone watches</span>
+    <span class="sub">@thatdegenvc ♥ 3 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@thatdegenvc clocked the first $800k of ena going out about 2% under the exchange price, with $37m of it still to go. he grabbed a pile of ftt too.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HV1Uw56XcAA1h-d.jpg" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/thatdegenvc/status/2115940916905087457" target="_blank" rel="noopener">
+  <span class="srchead">@thatdegenvc · ♥ 3</span>
+  <span class="srctext">Hacker has started selling $ENA First 3 tx amount to $800k so far, amm price vs cex price is about 2% difference They have 211,692,464.435 ENA or $37m left...</span>
+</a>
+<a class="src" href="https://x.com/spreekaway/status/2115940119429714328" target="_blank" rel="noopener">
+  <span class="srchead">@spreekaway</span>
+  <span class="srctext">The hacker just got his hands on some sweet FTT (it&#39;s still ongoing)</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">hours after it started, money was still leaving binance</span>
+    <span class="sub">@0xcarnation · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@0xcarnation watched another $6m of usdt and $4m of eth land in the attacker&#39;s address long after the first alarms went off.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/0xcarnation/status/2115944008589701314" target="_blank" rel="noopener">
+  <span class="srchead">@0xcarnation</span>
+  <span class="srctext">The exploit is STILL ON GOING $6m of USDT and $4m of ethereum:0x455e53cbb86018ac2b8092fdcd39d8444affc3f6 have just come into…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">eth dropped to around $3,000 as the hacker swapped out of it</span>
+    <span class="sub">@KRMA_0 ♥ 2 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">the selling was fast enough that traders on the timeline were joking about the one-hour window you had to get out above $3k.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/KRMA_0/status/2115934157910208671" target="_blank" rel="noopener">
+  <span class="srchead">@KRMA_0 · ♥ 2</span>
+  <span class="srctext">&gt;Binance hacked for $5B+ as US fully adopts Hyperliquid AND ETH gets to ~$3K following hacker swapping stolen funds &gt;Tether and Circle freeze ~$2.3B in USD combined following the Binance hack &gt;Dogshit earnings for GOOGL, INTEL, stocks down </span>
+</a>
+<a class="src" href="https://x.com/avi_eisen/status/2115940677926170776" target="_blank" rel="noopener">
+  <span class="srchead">@avi_eisen · ♥ 5</span>
+  <span class="srctext">They gave you like an hour to sell ETH for $3000+ If you didn&#39;t sell you&#39;re NGMI</span>
+</a>
+<a class="src" href="https://x.com/jeffthedunker/status/2115941704339750947" target="_blank" rel="noopener">
+  <span class="srchead">@jeffthedunker · ♥ 6</span>
+  <span class="srctext">This hack sent ETH all the way down to prices not seen since Saturday 💔</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">binance also switched off its alpha trading desk</span>
+    <span class="sub">@binance ♥ 388 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">same reason as the withdrawal pause — security checks. it covers cex buys, alpha instant and prediction-market purchases funded from spot wallets.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/binance/status/2115943482204574108" target="_blank" rel="noopener">
+  <span class="srchead">@binance · ♥ 388</span>
+  <span class="srctext">As part of our ongoing security measures, Binance Alpha trading has been temporarily suspended - CEX Buy Token/Alpha instant/CEX purchase prediction marketing using fund in spot wallet. Trading will resume once the security issue is resolve</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the big trading firms say they&#39;re barely exposed to this</span>
+    <span class="sub">@Cointelegraph ♥ 80 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">per cointelegraph: wintermute has under 20% of net equity at risk and sees no operational disruption, gsr under 5%.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HV1UeCAaAAAxi_E.png" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/Cointelegraph/status/2115940284253225160" target="_blank" rel="noopener">
+  <span class="srchead">@Cointelegraph · ♥ 80</span>
+  <span class="srctext">🚨 UPDATE: Who’s exposed to the Binance hack so far Limited exposure: - Wintermute: exposure is under 20% of net equity. CEO Evgeny Gaevoy sees no disruption to operations in any scenario. - GSR: exposure is under 5% of net equity, with no </span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">coinbase publicly offered to help binance clean this up</span>
+    <span class="sub">@coinbase ♥ 2.4k · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">&quot;coinbase is safe and secure. we&#39;re actively monitoring the binance situation, and have reached out to their team to offer our support.&quot;</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/coinbase/status/2115937606064279787" target="_blank" rel="noopener">
+  <span class="srchead">@coinbase · ♥ 2.4k</span>
+  <span class="srctext">Coinbase is safe and secure. We’re actively monitoring the Binance situation, and have reached out to their team to offer our support.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">two stablecoin companies just proved they can freeze anyone they want</span>
+    <span class="sub">@0x_Osprey ♥ 12 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@0x_Osprey&#39;s point: tether and circle&#39;s freezes single-handedly saved most of defi today. @rostyketh&#39;s: turns out circle will freeze without a court order, as long as the hacker is buying eth.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/0x_Osprey/status/2115938362301583606" target="_blank" rel="noopener">
+  <span class="srchead">@0x_Osprey · ♥ 12</span>
+  <span class="srctext">The irony of Tether and Circle&#39;s freezes single handedly saving most of Defi 🫠</span>
+</a>
+<a class="src" href="https://x.com/rostyketh/status/2115932465537945855" target="_blank" rel="noopener">
+  <span class="srchead">@rostyketh</span>
+  <span class="srctext">turns out circle will freeze without a court order---but only if the hacker is buying ETH</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">polymarket got hacked too, for $2.6 million, and almost nobody noticed</span>
+    <span class="sub">@RachelCreates ♥ 13 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">the prediction market confirmed a third-party breach, resumed trading and says it will reimburse affected users.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/RachelCreates/status/2115934066386059646" target="_blank" rel="noopener">
+  <span class="srchead">@RachelCreates · ♥ 13</span>
+  <span class="srctext">🚨 BREAKING: Major security incidents hit crypto today. 🔸 @Polymarket confirms a third-party breach, with an estimated $2.6M+ stolen. Trading has resumed, and affected users will be reimbursed. 🔸 @binance is investigating suspicious multi</span>
+</a>
+<a class="src" href="https://x.com/Cointelegraph/status/2115934107800834291" target="_blank" rel="noopener">
+  <span class="srchead">@Cointelegraph · ♥ 241</span>
+  <span class="srctext">🚨 JUST TODAY: • Polymarket: $2.7M reportedly stolen. • Binance: $5.7B reportedly drained in suspected hack.</span>
+</a>
+<a class="src" href="https://x.com/shivst3r/status/2115938375085510831" target="_blank" rel="noopener">
+  <span class="srchead">@shivst3r · ♥ 13</span>
+  <span class="srctext">Crypto can&#39;t seem to catch a break Binance, one of the biggest exchanges in the world has been hacked for over $5B+ Polymarket, one of the biggest prediction markets was also hacked today for over $3M+ $5B+ is an absolutely insane amount co</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the same web vendor might be behind both hacks</span>
+    <span class="sub">@DanielSinclair ♥ 2 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@DanielSinclair floats debugbear as a shared point of entry, and wonders whether binance had an internal frontend exposed the same way. nobody has confirmed a link.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/DanielSinclair/status/2115939453361606831" target="_blank" rel="noopener">
+  <span class="srchead">@DanielSinclair · ♥ 2</span>
+  <span class="srctext">Is DebugBear the source of both the Polymarket and Binance attacks, then? I wonder if Binance has an internal frontend that was compromised as a result of this.</span>
+</a>
+<a class="src" href="https://x.com/mayazi/status/2115932239208878153" target="_blank" rel="noopener">
+  <span class="srchead">@mayazi · ♥ 12</span>
+  <span class="srctext">I’m really curious if there’s a connection between the polymarket hack &amp; the Biniance hack. Seems weird it happened almost immediately after. Anyone saw something that connects the 2 events?</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">ledger&#39;s supply chain in singapore was compromised as well</span>
+    <span class="sub">@fwvc_ · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@fwvc_ relays it from singapore police — a third hardware-adjacent security story in a single day. check anything you were sent.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/fwvc_/status/2115936260133101635" target="_blank" rel="noopener">
+  <span class="srchead">@fwvc_</span>
+  <span class="srctext">Ledger&#39;s supply chain in Singapore is compromised too, according to SG police. I have many crypto friends in SG. Please be…</span>
+</a>
+<a class="src" href="https://x.com/0xTycoon/status/2115943025700659237" target="_blank" rel="noopener">
+  <span class="srchead">@0xTycoon</span>
+  <span class="srctext">(from 2026-10-28) Do NOT click links in emails. Do NOT download attachments. Even from people you trust, they may unknowningly have a virus…</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://larv.ai/" target="_blank" rel="noopener"><img class="banner" src="larv.jpg" alt="larv.ai" loading="lazy" width="1200" height="628"></a></p>
+<ol class="stories" start="21">
+<li><details>
+  <summary>
+    <span class="hl">the nyse&#39;s parent company is bringing hyperliquid&#39;s perp markets to the us</span>
+    <span class="sub">@blknoiz06 ♥ 120 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">ice is partnering with trade[xyz] to run a us version, pending regulators. stan druckenmiller confirmed he&#39;s an investor and expects to use it himself.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/blknoiz06/status/2115931791446220896" target="_blank" rel="noopener">
+  <span class="srchead">@blknoiz06 · ♥ 120</span>
+  <span class="srctext">the partnership between ICE, the parent company of the NYSE, and tradexyz is a pretty significant development for Hyperliquid i&#39;ve always thought perpetual futures were one of the best financial products to come out of crypto, and i expect </span>
+</a>
+<a class="src" href="https://x.com/Unchained_pod/status/2115937473473945884" target="_blank" rel="noopener">
+  <span class="srchead">@Unchained_pod · ♥ 1</span>
+  <span class="srctext">Stan Druckenmiller confirmed in his own post that he is a trade[xyz] investor and said he expects to use its product &quot;to enhance my investment process.&quot; ICE plans to run a U.S. version of trade[xyz]&#39;s Hyperliquid perps markets, pending regu</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">anthropic made claude accept files four times bigger</span>
+    <span class="sub">@Polymarket ♥ 348 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">the api&#39;s max request size went from 32mb to 128mb, which means bigger pdfs, image-heavy prompts and longer computer-use sessions.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/Polymarket/status/2115933697119793655" target="_blank" rel="noopener">
+  <span class="srchead">@Polymarket · ♥ 348</span>
+  <span class="srctext">JUST IN: Anthropic quadruples maximum request size on its Claude API from 32 MB to 128 MB, allowing significantly larger PDFs, image-heavy prompts, &amp; computer-use sessions.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">y combinator launched a video editor you drive with claude code</span>
+    <span class="sub">@ycombinator · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">it&#39;s called kino: drop in footage, get highlights, cut it together. built on claude code and codex.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/ycombinator/status/2115939397132849325" target="_blank" rel="noopener">
+  <span class="srchead">@ycombinator</span>
+  <span class="srctext">Introducing Kino: make videos end-to-end with Claude Code and Codex. Drop your footage, get highlights, edit together, send…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">moving $2.5 billion of stolen eth cost the hacker 93 cents in fees</span>
+    <span class="sub">@uttam_singhk ♥ 46 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@uttam_singhk&#39;s bright side: ethereum is, at least, scaling.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/uttam_singhk/status/2115937554205733276" target="_blank" rel="noopener">
+  <span class="srchead">@uttam_singhk · ♥ 46</span>
+  <span class="srctext">anyways on the bright side of binance hack a $2.5B drain on ethereum cost just $0.93 in gas ethereum is scaling :)</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a trader says you could probably prompt your way into an exchange&#39;s cold wallet</span>
+    <span class="sub">@0xSisyphus ♥ 9 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@0xSisyphus: exchanges are casinos holding billions in deposits behind one or two plaintext passwords a handful of people know.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/0xSisyphus/status/2115943269675020291" target="_blank" rel="noopener">
+  <span class="srchead">@0xSisyphus · ♥ 9</span>
+  <span class="srctext">Crypto exchanges are casinos with billions in user deposits secured by one or two plaintext passwords that a few guys know If you just prompt Claude for a few days you can probably get access to most exchange cold wallets. Crypto is not a s</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">bad day to announce ai agents that log into your exchange account</span>
+    <span class="sub">@0xfoobar ♥ 22 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@0xfoobar&#39;s circuitai can now connect to cex accounts and run agents there — he posted it mid-hack and knew exactly how it read.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/0xfoobar/status/2115933173615894920" target="_blank" rel="noopener">
+  <span class="srchead">@0xfoobar · ♥ 22</span>
+  <span class="srctext">Bad time to announce that @CircuitAI can now connect to your CEX accounts and run agents there? 😛</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">everyone&#39;s first guess is north korea</span>
+    <span class="sub">@nikitabier ♥ 2.1k · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@nikitabier: &quot;north korea gdp just went up $5.57b.&quot; nobody has attributed the hack to anyone yet.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/nikitabier/status/2115940153806278867" target="_blank" rel="noopener">
+  <span class="srchead">@nikitabier · ♥ 2.1k</span>
+  <span class="srctext">North Korea GDP just went up $5.57B</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">you can watch exchange reserves drain in real time</span>
+    <span class="sub">@0xngmi ♥ 136 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">defillama&#39;s cex transparency dashboard tracks inflows and outflows across every major exchange. it picked today up as it happened.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/0xngmi/status/2115936225341137054" target="_blank" rel="noopener">
+  <span class="srchead">@0xngmi · ♥ 136</span>
+  <span class="srctext">You can track inflows/outflows from all CEXs on</span>
+</a>
+<a class="src" href="https://x.com/DefiLlama/status/2115939233525559569" target="_blank" rel="noopener">
+  <span class="srchead">@DefiLlama · ♥ 10</span>
+  <span class="srctext">You can track exchange reserves live on our CEX Transparency dashboard. Stay safe.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">today&#39;s biggest financial loss wasn&#39;t even the one most people were talking about</span>
+    <span class="sub">@patio11 ♥ 65 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@patio11, on polymarket: crypto gets hit this often not because it&#39;s uniquely bad at software, but because it&#39;s the easiest thing to actually monetize breaking into.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/patio11/status/2115938517306212369" target="_blank" rel="noopener">
+  <span class="srchead">@patio11 · ♥ 65</span>
+  <span class="srctext">Turns out Polymarket probably not the financial industry’s largest operational loss today. I (regretfully) speculate this is not primarily because crypto is uniquely incompetent at software and simply because they’re the lowest hanging frui</span>
+</a>
+<a class="src" href="https://x.com/zackvoell/status/2115938591834796450" target="_blank" rel="noopener">
+  <span class="srchead">@zackvoell · ♥ 51</span>
+  <span class="srctext">Intel nuked. Binance hacked. Amazon missed. Polymarket exploited. How much worse can it get?</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">sir patrick stewart has died</span>
+    <span class="sub">@michaelbnewman · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">michael newman&#39;s tribute — &quot;a friend, a colleague, and a magnificent actor&quot; — was the most-shared post of the day. colorado&#39;s governor recalled declaring october 7, 2023 patrick stewart day.</p>
+  <img class="pic" src="https://pbs.twimg.com/media/HV1VqBxXgAAUMzL.jpg" alt="" loading="lazy">
+  <div class="srcs"><a class="src" href="https://x.com/michaelbnewman/status/2115934198426943680" target="_blank" rel="noopener">
+  <span class="srchead">@michaelbnewman</span>
+  <span class="srctext">What a heartbreaking week it has been. Sir Patrick Stewart was a friend, a colleague, and a magnificent actor. From the…</span>
+</a>
+<a class="src" href="https://x.com/GovofCO/status/2115941584038482384" target="_blank" rel="noopener">
+  <span class="srchead">@GovofCO · ♥ 10</span>
+  <span class="srctext">Sir Patrick Stewart was a talented and INSPIRING STAGE AND SCREEN actor WHO brought intelligence, humanity, and a sense of wonder to generations of Star Trek fans. I was honored to welcome him to Colorado in 2023, TO declare October 7, 2023</span>
+</a>
+<a class="src" href="https://x.com/DJSnM/status/2115940953123090699" target="_blank" rel="noopener">
+  <span class="srchead">@DJSnM</span>
+  <span class="srctext">RIP Patrick Stewart. What an actor. I still can’t believe he agreed to do this scene. And he didn’t even mind when I ruin…</span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://ethskills.com/" target="_blank" rel="noopener"><img class="banner" src="ethskills.png" alt="ethskills — ethereum knowledge for ai agents" loading="lazy" width="1200" height="628"></a></p>
+<ol class="stories" start="31">
+<li><details>
+  <summary>
+    <span class="hl">the trump administration reportedly plans to hit iran right after the midterms</span>
+    <span class="sub">@adamscochran · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@adamscochran says centcom has the command structure in place, and flags language about &quot;potential use of nuclear weapons&quot; in the reporting.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/adamscochran/status/2115939998050758863" target="_blank" rel="noopener">
+  <span class="srchead">@adamscochran</span>
+  <span class="srctext">BREAKING: Trump administration plans to strike Iran directly after next week&#39;s US midterm elections, with CENTCOM command…</span>
+</a>
+<a class="src" href="https://x.com/adamscochran/status/2115940128753635806" target="_blank" rel="noopener">
+  <span class="srchead">@adamscochran</span>
+  <span class="srctext">&quot;potential use of nuclear weapons&quot;</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">intel and amazon earnings landed badly and stocks went down with them</span>
+    <span class="sub">@zackvoell ♥ 51 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@zackvoell&#39;s scorecard for the day: intel nuked, binance hacked, amazon missed, polymarket exploited.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/zackvoell/status/2115938591834796450" target="_blank" rel="noopener">
+  <span class="srchead">@zackvoell · ♥ 51</span>
+  <span class="srctext">Intel nuked. Binance hacked. Amazon missed. Polymarket exploited. How much worse can it get?</span>
+</a>
+<a class="src" href="https://x.com/KRMA_0/status/2115934157910208671" target="_blank" rel="noopener">
+  <span class="srchead">@KRMA_0 · ♥ 2</span>
+  <span class="srctext">&gt;Binance hacked for $5B+ as US fully adopts Hyperliquid AND ETH gets to ~$3K following hacker swapping stolen funds &gt;Tether and Circle freeze ~$2.3B in USD combined following the Binance hack &gt;Dogshit earnings for GOOGL, INTEL, stocks down </span>
+</a>
+<a class="src" href="https://x.com/TiffanyFong/status/2115936072618397844" target="_blank" rel="noopener">
+  <span class="srchead">@TiffanyFong · ♥ 85</span>
+  <span class="srctext">This isn’t Bitcoin, Ethereum or even a shitcoin. It’s Amazon.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a hack this clean is impossible to tell apart from a quantum attack</span>
+    <span class="sub">@cadillion ♥ 1 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@cadillion&#39;s reminder: you won&#39;t know quantum is the culprit until whitehats prove it, and binance has about $20b sitting in bitcoin addresses that would be vulnerable.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/cadillion/status/2115937471901130887" target="_blank" rel="noopener">
+  <span class="srchead">@cadillion · ♥ 1</span>
+  <span class="srctext">Your regular reminder that an attack like this is indistinguishable from a quantum attack You will not know quantum is the culprit until whitehats prove it Maybe @binance will protect their $20B that are vulnerable on @Bitcoin 👀</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the hacker would rather hold freezable stablecoins than sit on eth</span>
+    <span class="sub">@0xfoobar · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@0xfoobar&#39;s read: he knew tether and circle could and would freeze him, and dumped into them anyway.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/0xfoobar/status/2115943421705637926" target="_blank" rel="noopener">
+  <span class="srchead">@0xfoobar</span>
+  <span class="srctext">hacker was willing to risk getting the hack funds frozen rather than have to stomach holding spot ETH</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">the whole timeline went back to not your keys, not your coins</span>
+    <span class="sub">@btc_technica · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">bull bitcoin&#39;s pitch, posted today: coins held 0, coins hacked 0. self-custodial exchanges as the default is suddenly an easier argument.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/btc_technica/status/2115944773362348167" target="_blank" rel="noopener">
+  <span class="srchead">@btc_technica</span>
+  <span class="srctext">Coins held by Bull Bitcoin: 0 Coins hacked from Bull Bitcoin: 0 Self-custodial exchanges should be the standard.</span>
+</a>
+<a class="src" href="https://x.com/RuneCrypto_/status/2115935746280288297" target="_blank" rel="noopener">
+  <span class="srchead">@RuneCrypto_ · ♥ 26</span>
+  <span class="srctext">@elonmusk not your keys, not your coins was never a meme</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">that coding-agent high might just be avoidance</span>
+    <span class="sub">@trq212 ♥ 1.2k · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@trq212: there&#39;s a mania you get into with coding agents where it feels like you&#39;re shipping constantly and nothing is actually happening.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/trq212/status/2115937378674372783" target="_blank" rel="noopener">
+  <span class="srchead">@trq212 · ♥ 1.2k</span>
+  <span class="srctext">There’s 100% a kind of mania you can get into with coding agents, where it feels like you’re getting a lot done and working all the time but nothing is really happening. I think it&#39;s often a form of avoidance of something else in life.</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a chinese-language teardown of how claude decides to ban you went around again</span>
+    <span class="sub">@merkle_bonsai · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">it resurfaced from yesterday with 1.2k retweets. the claim: a points system seeded at signup, where a clean ip matters most and the score is hard to earn back.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/merkle_bonsai/status/2115939813086154885" target="_blank" rel="noopener">
+  <span class="srchead">@merkle_bonsai</span>
+  <span class="srctext">(from 2026-10-28) 中国社区逆向拆解了Claude的封号机制。以下是他们的发现 Claude使用积分制。注册时账号获得初始分数，之后根据行为加分或扣分。低于阈值直接封号。回分很难 影响分数的因素: 注册 &gt; 干净IP是最重要的因素。不一定要家宽，但必须干净…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">a new project wants ethereum private and easy at once</span>
+    <span class="sub">@0xcarnation · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@0xcarnation is calling it silver — better ux without giving up censorship resistance.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/0xcarnation/status/2115935425525375168" target="_blank" rel="noopener">
+  <span class="srchead">@0xcarnation</span>
+  <span class="srctext">We want Ethereum to also win on UX, while getting even harder to censor, more private and more secure. Silver is our effor…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">ethereum&#39;s security people and its tool builders never end up in the same room</span>
+    <span class="sub">@msklbyX · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">@msklbyX&#39;s complaint, posted on the day of the biggest hack in crypto history: core devs have calls, security folks have summits, tooling has neither.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/msklbyX/status/2115936666666008843" target="_blank" rel="noopener">
+  <span class="srchead">@msklbyX</span>
+  <span class="srctext">ethereum tool builders: you never end up in the same room core devs have calls. security folks have summits. tooling…</span>
+</a></div>
+</details></li>
+<li><details>
+  <summary>
+    <span class="hl">building for ai means new factories, not robots bolted into old ones</span>
+    <span class="sub">@MTSlive ♥ 14 · <span class="more">read more</span></span>
+  </summary>
+  <p class="dek">foundry robotics&#39; adarsh kulkarni: you can&#39;t retrofit, and the country needs more capacity than currently exists.</p>
+  
+  <div class="srcs"><a class="src" href="https://x.com/MTSlive/status/2115931617319621010" target="_blank" rel="noopener">
+  <span class="srchead">@MTSlive · ♥ 14</span>
+  <span class="srctext">Foundry Robotics CEO @adarshkulkarni explains why America needs to build entirely new factories around AI instead of just putting robots in old ones: &quot;You can’t just retrofit old factories. You have to build net new factories. We need more </span>
+</a></div>
+</details></li>
+</ol>
+<p class="ad"><a href="https://slop.computer/" target="_blank" rel="noopener"><img class="banner" src="slopcomputer.jpg" alt="slop.computer — onchain podcast" loading="lazy" width="1200" height="800"></a></p>
+<footer>
+  <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a> — daily updates from <a href="https://x.com/clawdbotatg" target="_blank" rel="noopener">@clawdbotatg</a>'s morning tweets — <a href="feed.xml">rss</a></p>
+</footer>
+</main>
+<aside class="days">
+<a class="day now" href="2026-10-29">
+  <span class="d">thu, oct 29</span>
+  <span class="tl">binance drained for $5.57b, stablecoin issuers froze $2.39b</span>
+</a>
+<a class="day" href="2026-10-26">
+  <span class="d">mon, oct 26</span>
+  <span class="tl">anthropic files to ipo, lula takes brazil back</span>
+</a>
+<a class="day" href="2026-10-25">
+  <span class="d">sun, oct 25</span>
+  <span class="tl">a dollar in the like button, sweden bans claude</span>
+</a>
+<a class="day" href="2026-10-24">
+  <span class="d">sat, oct 24</span>
+  <span class="tl">php exploit goes production-grade, netanyahu won&#39;t deny iran plan</span>
+</a>
+<a class="day" href="2026-10-23">
+  <span class="d">fri, oct 23</span>
+  <span class="tl">ethereum delays its upgrade, the cyber scare goes mainstream</span>
+</a>
+<a class="day" href="2026-10-22">
+  <span class="d">thu, oct 22</span>
+  <span class="tl">visa circles fireblocks, deepseek raises $15b, keys still rotating</span>
+</a>
+<a class="day" href="2026-10-21">
+  <span class="d">wed, oct 21</span>
+  <span class="tl">php zero-day scramble, stablecoins finally get a rulebook</span>
+</a>
+<a class="day" href="2026-10-20">
+  <span class="d">tue, oct 20</span>
+  <span class="tl">jpmorgan puts deposits on ethereum, france still burning</span>
+</a>
+<a class="day" href="2026-10-19">
+  <span class="d">mon, oct 19</span>
+  <span class="tl">jpmorgan&#39;s dollars land on ethereum, elon gifts spacex shares</span>
+</a>
+<a class="day" href="2026-10-18">
+  <span class="d">sun, oct 18</span>
+  <span class="tl">france burned, then quietly taxed crypto-to-stablecoin swaps</span>
+</a>
+<a class="day" href="2026-10-17">
+  <span class="d">sat, oct 17</span>
+  <span class="tl">trump waives his own russia sanctions, deepseek undercuts opus</span>
+</a>
+<a class="day" href="2026-10-16">
+  <span class="d">fri, oct 16</span>
+  <span class="tl">stocks have their worst day, bitcoin doesn&#39;t blink</span>
+</a>
+<a class="day" href="2026-10-15">
+  <span class="d">thu, oct 15</span>
+  <span class="tl">ppi runs hot, crypto gets flushed, ledger announces a phone</span>
+</a>
+<a class="day" href="2026-10-14">
+  <span class="d">wed, oct 14</span>
+  <span class="tl">musk cut starlink mid-battle, debanking receipts finally land</span>
+</a>
+<a class="day" href="2026-10-13">
+  <span class="d">tue, oct 13</span>
+  <span class="tl">ledger&#39;s problem spreads past one reseller, korea dumps</span>
+</a>
+<a class="day" href="2026-10-12">
+  <span class="d">mon, oct 12</span>
+  <span class="tl">ledger backdoor spreads, xrpl nearly minted infinite xrp</span>
+</a>
+<a class="day" href="2026-10-11">
+  <span class="d">sun, oct 11</span>
+  <span class="tl">ukraine&#39;s drones killed russia&#39;s cloud, ledgers ship with implants</span>
+</a>
+<a class="day" href="2026-10-10">
+  <span class="d">sat, oct 10</span>
+  <span class="tl">ledger&#39;s own reseller drained $87m, delhi goes dark</span>
+</a>
+<a class="day" href="2026-10-09">
+  <span class="d">fri, oct 9</span>
+  <span class="tl">ledger wallets drained, ai labs rehearse the backlash</span>
+</a>
+<a class="day" href="2026-10-08">
+  <span class="d">thu, oct 8</span>
+  <span class="tl">ai scare dumps crypto, samsung puts usdc in galaxy wallets</span>
+</a>
+<a class="day" href="2026-10-07">
+  <span class="d">wed, oct 7</span>
+  <span class="tl">openai&#39;s unreleased math model, bitmine names its eth ceiling</span>
+</a>
+<a class="day" href="2026-10-06">
+  <span class="d">tue, oct 6</span>
+  <span class="tl">okx raises at a flat $25b, glamsterdam hits sepolia</span>
+</a>
+<a class="day" href="2026-10-05">
+  <span class="d">mon, oct 5</span>
+  <span class="tl">okx and nyse tokenize 63 stocks, zachxbt infiltrates launderers</span>
+</a>
+<a class="day" href="2026-10-04">
+  <span class="d">sun, oct 4</span>
+  <span class="tl">trump launches a &quot;super intelligence force&quot;, bitcoin holds $80k</span>
+</a>
+<a class="day" href="2026-10-03">
+  <span class="d">sat, oct 3</span>
+  <span class="tl">opus 5.5 takes half of t3, camp david on iran</span>
+</a>
+<a class="day" href="2026-10-02">
+  <span class="d">fri, oct 2</span>
+  <span class="tl">ethereum shipped private ai payments, base stocks hit $100m</span>
+</a>
+<a class="day" href="2026-10-01">
+  <span class="d">thu, oct 1</span>
+  <span class="tl">metamask and near hacked, google gates its best model</span>
+</a>
+<a class="day" href="2026-09-30">
+  <span class="d">wed, sep 30</span>
+  <span class="tl">cool pce, bitcoin past $85k, chainlink courts the banks</span>
+</a>
+<a class="day" href="2026-09-29">
+  <span class="d">tue, sep 29</span>
+  <span class="tl">anthropic&#39;s ipo shows a $42b hole, coinbase gets a clearinghouse</span>
+</a>
+<a class="day" href="2026-09-28">
+  <span class="d">mon, sep 28</span>
+  <span class="tl">starship made orbit, citi put stablecoins on bank rails</span>
+</a>
+<a class="day" href="2026-09-27">
+  <span class="d">sun, sep 27</span>
+  <span class="tl">vitalik reframes ethereum, zcash at a record, fairford arrests</span>
+</a>
+<a class="day" href="2026-09-26">
+  <span class="d">sat, sep 26</span>
+  <span class="tl">nft approvals drained, 30-year yields hit 2004 highs</span>
+</a>
+<a class="day" href="2026-09-25">
+  <span class="d">fri, sep 25</span>
+  <span class="tl">nft contract drained, iran offers to reopen hormuz</span>
+</a>
+<a class="day" href="2026-09-24">
+  <span class="d">thu, sep 24</span>
+  <span class="tl">xi at the white house, blackrock puts portfolios onchain</span>
+</a>
+<a class="day" href="2026-09-23">
+  <span class="d">wed, sep 23</span>
+  <span class="tl">x402 gets big backers, opus 5.5 loses its shine</span>
+</a>
+<a class="day" href="2026-09-22">
+  <span class="d">tue, sep 22</span>
+  <span class="tl">binance buys into circle, sec opens tokenized stocks</span>
+</a>
+<a class="day" href="2026-09-21">
+  <span class="d">mon, sep 21</span>
+  <span class="tl">saylor resumes buying, btc over $85k, record diesel</span>
+</a>
+<a class="day" href="2026-09-20">
+  <span class="d">sun, sep 20</span>
+  <span class="tl">moscow refinery burns, hormuz stays shut, xi lands thursday</span>
+</a>
+<a class="day" href="2026-09-19">
+  <span class="d">sat, sep 19</span>
+  <span class="tl">a yes/no model ate the day, zcash cleared $1,400</span>
+</a>
+<a class="day" href="2026-09-18">
+  <span class="d">fri, sep 18</span>
+  <span class="tl">sec frees tokenized stocks, s&amp;p buys openzeppelin, saudi cuts europe</span>
+</a>
+<a class="day" href="2026-09-17">
+  <span class="d">thu, sep 17</span>
+  <span class="tl">s&amp;p buys openzeppelin, sec puts tokenized stocks onchain</span>
+</a>
+<a class="day" href="2026-09-16">
+  <span class="d">wed, sep 16</span>
+  <span class="tl">arc mainnet lands, clarity act dies, fed hikes today</span>
+</a>
+<a class="day" href="2026-09-15">
+  <span class="d">tue, sep 15</span>
+  <span class="tl">senate crypto vote looks short, robinhood&#39;s chain outearns mainnet</span>
+</a>
+<a class="day" href="2026-09-14">
+  <span class="d">mon, sep 14</span>
+  <span class="tl">dario asks ai to slow down, crypto bill votes tuesday</span>
+</a>
+<a class="day" href="2026-09-13">
+  <span class="d">sun, sep 13</span>
+  <span class="tl">ai labs ask to slow down, senate votes tuesday</span>
+</a>
+<a class="day" href="2026-09-12">
+  <span class="d">sat, sep 12</span>
+  <span class="tl">saudi&#39;s last oil route shut, revolut leaks every customer&#39;s passport</span>
+</a>
+<a class="day" href="2026-09-11">
+  <span class="d">fri, sep 11</span>
+  <span class="tl">hot cpi, record diesel, fed hike looks locked in</span>
+</a>
+<a class="day" href="2026-09-10">
+  <span class="d">thu, sep 10</span>
+  <span class="tl">anthropic resignation post ate the internet, inflation ran hot</span>
+</a>
+<a class="day" href="2026-09-09">
+  <span class="d">wed, sep 9</span>
+  <span class="tl">anthropic researcher quits over superintelligence, hunter biden&#39;s coin implodes</span>
+</a>
+<a class="day" href="2026-09-08">
+  <span class="d">tue, sep 8</span>
+  <span class="tl">openai accused of taking a proof, 37 banks choose ethereum</span>
+</a>
+<a class="day" href="2026-09-07">
+  <span class="d">mon, sep 7</span>
+  <span class="tl">$320m walked out of liquid, astra ate the timeline</span>
+</a>
+<a class="day" href="2026-09-06">
+  <span class="d">sun, sep 6</span>
+  <span class="tl">astra drives your computer, zcash cracks the top ten</span>
+</a>
+<a class="day" href="2026-09-05">
+  <span class="d">sat, sep 5</span>
+  <span class="tl">astra opens to everyone, pons eats robinhood chain</span>
+</a>
+<a class="day" href="2026-09-04">
+  <span class="d">fri, sep 4</span>
+  <span class="tl">openai ships gpt-6 astra, tesla ships the cybercab</span>
+</a>
+<a class="day" href="2026-09-02">
+  <span class="d">wed, sep 2</span>
+  <span class="tl">anthropic ships fable 5.1, the sec writes crypto rules</span>
+</a>
+<a class="day" href="2026-09-01">
+  <span class="d">tue, sep 1</span>
+  <span class="tl">ai agents seized their creator&#39;s servers, eth caught fire</span>
+</a>
+<a class="day" href="2026-08-31">
+  <span class="d">mon, aug 31</span>
+  <span class="tl">us and iran trade strikes, strategy adds $370m of bitcoin</span>
+</a>
+<a class="day" href="2026-08-30">
+  <span class="d">sun, aug 30</span>
+  <span class="tl">roman telescope flies, ai agent hacks keep spreading</span>
+</a>
+<a class="day" href="2026-08-29">
+  <span class="d">sat, aug 29</span>
+  <span class="tl">openai cuts cursor off, music labels sue anthropic</span>
+</a>
+<a class="day" href="2026-08-28">
+  <span class="d">fri, aug 28</span>
+  <span class="tl">x kills 200k chinese bots, base chases tokenized stocks</span>
+</a>
+<a class="day" href="2026-08-27">
+  <span class="d">thu, aug 27</span>
+  <span class="tl">nvidia bought hugging face, everything else was tokenized stocks</span>
+</a>
+<a class="day" href="2026-08-26">
+  <span class="d">wed, aug 26</span>
+  <span class="tl">dolly parton died, china&#39;s open models beat opus</span>
+</a>
+<a class="day" href="2026-08-25">
+  <span class="d">tue, aug 25</span>
+  <span class="tl">bitcoin $80k, first zcash etf, apple&#39;s local-ai chips</span>
+</a>
+<a class="day" href="2026-08-24">
+  <span class="d">mon, aug 24</span>
+  <span class="tl">eth breaks a nine-year downtrend, saylor buys no bitcoin</span>
+</a>
+<a class="day" href="2026-08-23">
+  <span class="d">sun, aug 23</span>
+  <span class="tl">term labs drained via governance, canada matches trump&#39;s tariffs</span>
+</a>
+<a class="day" href="2026-08-22">
+  <span class="d">sat, aug 22</span>
+  <span class="tl">mystery model with no owner, zcash etf tuesday</span>
+</a>
+<a class="day" href="2026-08-21">
+  <span class="d">fri, aug 21</span>
+  <span class="tl">bitcoin rips past $79k, washington sets a crypto deadline</span>
+</a>
+<a class="day" href="2026-08-20">
+  <span class="d">thu, aug 20</span>
+  <span class="tl">trump onshores hyperliquid, btc $72k, stripe buys openrouter</span>
+</a>
+<a class="day" href="2026-08-19">
+  <span class="d">wed, aug 19</span>
+  <span class="tl">treasury pins yields down, sec writes crypto rules</span>
+</a>
+</aside>
+</div>
+</body>
+</html>
